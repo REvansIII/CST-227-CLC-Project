@@ -51,7 +51,7 @@ namespace MedOffice_1._0
                     //Clerical login page 2 is Clerical groupID
                     case "2":
                     //Creates and opens the MDI and sets Clerical form to true
-                    Main_Menu cMDI = new Main_Menu(true);
+                    Main_Menu cMDI = new Main_Menu(username,true);
                     //Opens Clerical form
                     cMDI.Show();
                     //Clears username, password, and permission in Login menu for variables and text fields

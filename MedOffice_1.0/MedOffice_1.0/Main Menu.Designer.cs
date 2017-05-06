@@ -43,8 +43,8 @@
             this.clericalFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.Welcomelbl = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -129,7 +129,7 @@
             // clericalFormToolStripMenuItem
             // 
             this.clericalFormToolStripMenuItem.Name = "clericalFormToolStripMenuItem";
-            this.clericalFormToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clericalFormToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.clericalFormToolStripMenuItem.Text = "Clerical Form";
             this.clericalFormToolStripMenuItem.Click += new System.EventHandler(this.clericalFormToolStripMenuItem_Click);
             // 
@@ -140,22 +140,23 @@
             this.toolStrip.Size = new System.Drawing.Size(632, 25);
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "ToolStrip";
+            this.toolStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip_ItemClicked);
             // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
+            this.Welcomelbl});
             this.statusStrip.Location = new System.Drawing.Point(0, 431);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(632, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
-            // toolStripStatusLabel
+            // Welcomelbl
             // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
-            this.toolStripStatusLabel.Text = "Status";
+            this.Welcomelbl.Name = "Welcomelbl";
+            this.Welcomelbl.Size = new System.Drawing.Size(118, 17);
+            this.Welcomelbl.Text = "toolStripStatusLabel1";
             // 
             // Main_Menu
             // 
@@ -169,6 +170,7 @@
             this.MainMenuStrip = this.menuStrip;
             this.Name = "Main_Menu";
             this.Text = "Main_Menu";
+            this.Load += new System.EventHandler(this.Main_Menu_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -186,7 +188,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolStripMenuItem fileMenu;
         private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
@@ -196,6 +197,7 @@
         private System.Windows.Forms.ToolStripMenuItem formsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clericalFormToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripStatusLabel Welcomelbl;
     }
 }
 

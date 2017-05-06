@@ -12,15 +12,17 @@ namespace MedOffice_1._0
 {
     public partial class Main_Menu : Form
     {
-        //Enables forms based 
-        public Main_Menu(Boolean cForm)
+        //Enables forms based on user Permissions passed in
+        public Main_Menu(String username, Boolean cForm)
         {
             //Code in this method happens as the application is opened
             InitializeComponent();
+            Welcomelbl.Text = "Welcome " + username;
             //Enables the forms the users have access to
             clericalFormToolStripMenuItem.Enabled = cForm;
+
         }
-        //Closes application
+        //Closes this form
         private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -32,6 +34,16 @@ namespace MedOffice_1._0
             //Opens nClerical form in the MDI container
             nClerical.MdiParent = this;
             nClerical.Show();
+        }
+
+        private void Main_Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
 
     }
