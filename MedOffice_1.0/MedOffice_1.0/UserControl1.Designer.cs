@@ -88,6 +88,7 @@
             // 
             // insBox
             // 
+            this.insBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.insBox.FormattingEnabled = true;
             this.insBox.Location = new System.Drawing.Point(500, 108);
             this.insBox.Name = "insBox";
@@ -195,6 +196,7 @@
             this.Controls.Add(this.firstNameBox);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.searchButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Clerical";
             this.Load += new System.EventHandler(this.Clerical_Load);
             this.ResumeLayout(false);

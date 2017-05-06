@@ -15,7 +15,7 @@ namespace MedOffice_1._0
     public partial class Clerical : Form
     {
         OleDbConnection conn = new OleDbConnection();
-        OleDbConnection conn2 = new OleDbConnection();
+        //OleDbConnection conn2 = new OleDbConnection();
         string patientLast, patientFirst, ins, dob, fullPatient, age;
 
         private void saveButton_Click(object sender, EventArgs e)
@@ -26,9 +26,9 @@ namespace MedOffice_1._0
             ins = insBox.Text;
             age = ageBox.Text;
 
-            conn2.Open();
+            conn.Open();
             OleDbCommand comm = new OleDbCommand();
-            comm.Connection = conn2;
+            comm.Connection = conn;
             comm.CommandText = "INSERT INTO OurPatients(PatientLast, PatientFirst, PatientAge" 
                 + ", PatientDOB, PatientIns)" +
                      "VALUES ('" + patientLast + "', '" + patientFirst
@@ -42,7 +42,7 @@ namespace MedOffice_1._0
 
             comm.ExecuteNonQuery();
 
-            conn2.Close();
+            conn.Close();
         }
 
         private void Clerical_Load(object sender, EventArgs e)
@@ -54,10 +54,9 @@ namespace MedOffice_1._0
         public Clerical()
         {
             InitializeComponent();
-            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\xdark\Documents\MedOfficeDB.accdb;
-Persist Security Info=False;";
-            conn2.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\xdark\Documents\MedOfficeDB.accdb;
-Persist Security Info=False;";
+            conn.ConnectionString = ConnectionString.Conn;
+            //conn2.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\xdark\Documents\MedOfficeDB.accdb;
+//Persist Security Info=False;";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -67,6 +66,7 @@ Persist Security Info=False;";
 
         private void searchButton_Click(object sender, EventArgs e)
         {
+
             patientLast = lastNameBox.Text;
             patientFirst = firstNameBox.Text;
             dob = dobBox.Text;
