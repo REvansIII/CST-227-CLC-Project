@@ -47,17 +47,28 @@ namespace MedOffice_1._0
                 }
                 switch (permission)
                 {
-                    //Clerical login page
+                   
+                    //Clerical login page 2 is Clerical groupID
                     case "2":
-                    Clerical clerk = new Clerical();
-                    clerk.Show();
+                    //Creates and opens the MDI and sets Clerical form to true
+                    Main_Menu cMDI = new Main_Menu(true);
+                    //Opens Clerical form
+                    cMDI.Show();
+                    //Clears username, password, and permission in Login menu for variables and text fields
+                    usernameBox.Text = username = passwordBox.Text = password = permission = "";
                     break;
-                    
-                    //TODO add admin page and display page
+
+                    //TODO admin has access to all forms everything will be true.
                     case "1":
 
+                    this.Close();
+                    break;
+                    
+                    /* If permissionType is not found for passed in credentials the user does not exist because
+                     * permissionType is a required field for every user
+                     */
                     default:
-                        MessageBox.Show("This user has no permissions to access this application.");
+                        MessageBox.Show("Invalid username or password.","Invalid Login Credentials", MessageBoxButtons.OK,MessageBoxIcon.Information);
                         break;
 
                 }
