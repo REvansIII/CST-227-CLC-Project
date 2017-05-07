@@ -15,6 +15,16 @@ namespace MedOffice_1._0
 
         }
 
+        private void checkinButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void apptButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void ageBox_TextChanged(object sender, EventArgs e)
         {
 
@@ -91,8 +101,8 @@ namespace MedOffice_1._0
         public Clerical()
         {
             InitializeComponent();
-            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Robbie\Documents\Med_2.mdb;";
-            conn2.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Robbie\Documents\Med_2.mdb;";
+            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\Med_2.mdb;";
+            conn2.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\Med_2.mdb";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
