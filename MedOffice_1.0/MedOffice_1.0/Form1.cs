@@ -12,7 +12,7 @@ namespace MedOffice_1._0
         public Form1()
         {
             InitializeComponent();
-            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Robbie\Documents\Med_2.mdb;";
+            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\Med_2.mdb;";
         }
 
         private void Form1_Load(object sender, EventArgs e)

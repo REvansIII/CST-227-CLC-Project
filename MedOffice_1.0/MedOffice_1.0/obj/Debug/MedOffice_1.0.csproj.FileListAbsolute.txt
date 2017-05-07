@@ -18,3 +18,13 @@ C:\Users\Robbie\Documents\CST-227-CLC-Project-master\CST-227-CLC-Project-master\
 C:\Users\Robbie\Documents\CST-227-CLC-Project-master\CST-227-CLC-Project-master\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1.0.csproj.GenerateResource.Cache
 C:\Users\Robbie\Documents\CST-227-CLC-Project-master\CST-227-CLC-Project-master\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1.0.exe
 C:\Users\Robbie\Documents\CST-227-CLC-Project-master\CST-227-CLC-Project-master\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1.0.pdb
+C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\bin\Debug\MedOffice_1.0.exe.config
+C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1.0.exe
+C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1.0.pdb
+C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\bin\Debug\MedOffice_1.0.exe
+C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\bin\Debug\MedOffice_1.0.pdb
+C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1.0.csprojResolveAssemblyReference.cache
+C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1._0.Form1.resources
+C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1._0.Properties.Resources.resources
+C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1._0.Clerical.resources
+C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1.0.csproj.GenerateResource.Cache
