@@ -7,15 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.OleDb;
 
 namespace MedOffice_1._0
 {
     public partial class Login : Form
     {
+        //Class level variable
         OleDbConnection conn = new OleDbConnection();
-        string permission = "";
                 
         public Login()
         {
@@ -23,12 +22,9 @@ namespace MedOffice_1._0
             conn.ConnectionString = ConnectionString.Conn;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-        }
-
         private void loginButton_Click(object sender, EventArgs e)
         {
+            string permission = "";
             string username = usernameBox.Text;
             string password = passwordBox.Text;
 
@@ -47,23 +43,33 @@ namespace MedOffice_1._0
                 }
                 switch (permission)
                 {
-                   
-                    //Clerical login page 2 is Clerical groupID
+
+                    //Admin login page 1 is Admin group ID has rights to all forms
+                    case "1":
+                    //Creates and opens the MDI and sets all forms to true
+                    Main_Menu aMDI = new Main_Menu(username, true,true,true);
+                    aMDI.Show();
+                    //Clears username, password, and permission in Login menu for variables and text fields
+                    usernameBox.Text = username = passwordBox.Text = password = permission = "";
+                    break;
+                    
+                    //Clerical login page 2 is Clerical groupID only has access to Clerical form
                     case "2":
                     //Creates and opens the MDI and sets Clerical form to true
-                    Main_Menu cMDI = new Main_Menu(true);
-                    //Opens Clerical form
+                    Main_Menu cMDI = new Main_Menu(username,true,false,true);
                     cMDI.Show();
                     //Clears username, password, and permission in Login menu for variables and text fields
                     usernameBox.Text = username = passwordBox.Text = password = permission = "";
                     break;
-
-                    //TODO admin has access to all forms everything will be true.
-                    case "1":
-
-                    this.Close();
-                    break;
                     
+                    case "4":
+                    //Creates and opens the MDI and sets only staffing form to true
+                    Main_Menu oMDI = new Main_Menu(username, false,true,false);
+                    oMDI.Show();
+                    //Clears username, password, and permission in Login menu for variables and text fields
+                    usernameBox.Text = username = passwordBox.Text = password = permission = "";
+                    break;
+
                     /* If permissionType is not found for passed in credentials the user does not exist because
                      * permissionType is a required field for every user
                      */
@@ -79,6 +85,11 @@ namespace MedOffice_1._0
             {
                 MessageBox.Show("Unable to access DB. Please check your DB connectivity settings.", "Unable to connect to DB",MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }  
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

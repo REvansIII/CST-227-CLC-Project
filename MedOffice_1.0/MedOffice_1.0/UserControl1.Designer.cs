@@ -34,6 +34,7 @@
             this.ageBox = new System.Windows.Forms.TextBox();
             this.dobBox = new System.Windows.Forms.TextBox();
             this.insBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,77 +42,87 @@
             this.patientBox = new System.Windows.Forms.ListBox();
             this.lastNameBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox_gender = new System.Windows.Forms.TextBox();
-            this.textBox_ethnicity = new System.Windows.Forms.TextBox();
-            this.textBox_phoneNumber = new System.Windows.Forms.TextBox();
-            this.label_gender = new System.Windows.Forms.Label();
-            this.label_ethnicity = new System.Windows.Forms.Label();
-            this.label_phoneNumber = new System.Windows.Forms.Label();
-            this.textBox_address = new System.Windows.Forms.TextBox();
-            this.label_address = new System.Windows.Forms.Label();
-            this.textBox_Allergies_Diseases_Meds = new System.Windows.Forms.TextBox();
-            this.allergyRadio = new System.Windows.Forms.RadioButton();
-            this.diseaseRadio = new System.Windows.Forms.RadioButton();
             this.medicationRadio = new System.Windows.Forms.RadioButton();
-            this.updateButton = new System.Windows.Forms.Button();
+            this.diseaseRadio = new System.Windows.Forms.RadioButton();
+            this.allergyRadio = new System.Windows.Forms.RadioButton();
+            this.textBox_Allergies_Diseases_Meds = new System.Windows.Forms.TextBox();
+            this.label_address = new System.Windows.Forms.Label();
+            this.textBox_address = new System.Windows.Forms.TextBox();
+            this.label_phoneNumber = new System.Windows.Forms.Label();
+            this.label_ethnicity = new System.Windows.Forms.Label();
+            this.label_gender = new System.Windows.Forms.Label();
+            this.textBox_phoneNumber = new System.Windows.Forms.TextBox();
+            this.textBox_ethnicity = new System.Windows.Forms.TextBox();
+            this.textBox_gender = new System.Windows.Forms.TextBox();
             this.checkinBox = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(234, 484);
+            this.searchButton.Location = new System.Drawing.Point(130, 321);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(75, 23);
-            this.searchButton.TabIndex = 11;
+            this.searchButton.TabIndex = 0;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(60, 484);
+            this.saveButton.Location = new System.Drawing.Point(14, 459);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(112, 23);
-            this.saveButton.TabIndex = 10;
+            this.saveButton.TabIndex = 1;
             this.saveButton.Text = "Save New Patient";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // firstNameBox
             // 
-            this.firstNameBox.Location = new System.Drawing.Point(163, 59);
+            this.firstNameBox.Location = new System.Drawing.Point(120, 64);
             this.firstNameBox.Name = "firstNameBox";
             this.firstNameBox.Size = new System.Drawing.Size(100, 20);
-            this.firstNameBox.TabIndex = 1;
+            this.firstNameBox.TabIndex = 2;
             // 
             // ageBox
             // 
-            this.ageBox.Location = new System.Drawing.Point(269, 59);
+            this.ageBox.Location = new System.Drawing.Point(226, 64);
             this.ageBox.Name = "ageBox";
-            this.ageBox.Size = new System.Drawing.Size(30, 20);
-            this.ageBox.TabIndex = 2;
-            this.ageBox.TextChanged += new System.EventHandler(this.ageBox_TextChanged);
+            this.ageBox.Size = new System.Drawing.Size(100, 20);
+            this.ageBox.TabIndex = 3;
             // 
             // dobBox
             // 
-            this.dobBox.Location = new System.Drawing.Point(312, 59);
+            this.dobBox.Location = new System.Drawing.Point(332, 64);
             this.dobBox.Name = "dobBox";
             this.dobBox.Size = new System.Drawing.Size(100, 20);
-            this.dobBox.TabIndex = 3;
+            this.dobBox.TabIndex = 4;
             // 
             // insBox
             // 
+            this.insBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.insBox.FormattingEnabled = true;
-            this.insBox.Location = new System.Drawing.Point(430, 59);
+            this.insBox.Location = new System.Drawing.Point(438, 64);
             this.insBox.Name = "insBox";
             this.insBox.Size = new System.Drawing.Size(121, 21);
-            this.insBox.TabIndex = 4;
-            this.insBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.insBox.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 18);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Welcome, clerical staff";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 43);
+            this.label2.Location = new System.Drawing.Point(36, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 7;
@@ -120,7 +131,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(266, 43);
+            this.label3.Location = new System.Drawing.Point(265, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 8;
@@ -129,7 +140,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(309, 43);
+            this.label4.Location = new System.Drawing.Point(338, 48);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 13);
             this.label4.TabIndex = 9;
@@ -138,7 +149,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(427, 43);
+            this.label5.Location = new System.Drawing.Point(471, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 10;
@@ -147,165 +158,171 @@
             // patientBox
             // 
             this.patientBox.FormattingEnabled = true;
-            this.patientBox.Location = new System.Drawing.Point(430, 247);
+            this.patientBox.Location = new System.Drawing.Point(356, 270);
             this.patientBox.Name = "patientBox";
-            this.patientBox.Size = new System.Drawing.Size(351, 173);
-            this.patientBox.TabIndex = 13;
+            this.patientBox.Size = new System.Drawing.Size(335, 160);
+            this.patientBox.TabIndex = 11;
             // 
             // lastNameBox
             // 
-            this.lastNameBox.Location = new System.Drawing.Point(57, 59);
+            this.lastNameBox.Location = new System.Drawing.Point(14, 64);
             this.lastNameBox.Name = "lastNameBox";
             this.lastNameBox.Size = new System.Drawing.Size(100, 20);
-            this.lastNameBox.TabIndex = 0;
-            this.lastNameBox.TextChanged += new System.EventHandler(this.lastNameBox_TextChanged);
+            this.lastNameBox.TabIndex = 13;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(160, 43);
+            this.label6.Location = new System.Drawing.Point(139, 48);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 13);
             this.label6.TabIndex = 14;
             this.label6.Text = "First Name";
             // 
-            // textBox_gender
-            // 
-            this.textBox_gender.Location = new System.Drawing.Point(57, 113);
-            this.textBox_gender.Name = "textBox_gender";
-            this.textBox_gender.Size = new System.Drawing.Size(42, 20);
-            this.textBox_gender.TabIndex = 5;
-            this.textBox_gender.TextChanged += new System.EventHandler(this.textBox_gender_TextChanged);
-            // 
-            // textBox_ethnicity
-            // 
-            this.textBox_ethnicity.Location = new System.Drawing.Point(117, 113);
-            this.textBox_ethnicity.Name = "textBox_ethnicity";
-            this.textBox_ethnicity.Size = new System.Drawing.Size(100, 20);
-            this.textBox_ethnicity.TabIndex = 6;
-            this.textBox_ethnicity.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // textBox_phoneNumber
-            // 
-            this.textBox_phoneNumber.Location = new System.Drawing.Point(234, 113);
-            this.textBox_phoneNumber.Name = "textBox_phoneNumber";
-            this.textBox_phoneNumber.Size = new System.Drawing.Size(100, 20);
-            this.textBox_phoneNumber.TabIndex = 7;
-            // 
-            // label_gender
-            // 
-            this.label_gender.AutoSize = true;
-            this.label_gender.Location = new System.Drawing.Point(57, 94);
-            this.label_gender.Name = "label_gender";
-            this.label_gender.Size = new System.Drawing.Size(42, 13);
-            this.label_gender.TabIndex = 18;
-            this.label_gender.Text = "Gender";
-            // 
-            // label_ethnicity
-            // 
-            this.label_ethnicity.AutoSize = true;
-            this.label_ethnicity.Location = new System.Drawing.Point(117, 94);
-            this.label_ethnicity.Name = "label_ethnicity";
-            this.label_ethnicity.Size = new System.Drawing.Size(47, 13);
-            this.label_ethnicity.TabIndex = 19;
-            this.label_ethnicity.Text = "Ethnicity";
-            this.label_ethnicity.Click += new System.EventHandler(this.label_ethnicity_Click);
-            // 
-            // label_phoneNumber
-            // 
-            this.label_phoneNumber.AutoSize = true;
-            this.label_phoneNumber.Location = new System.Drawing.Point(234, 94);
-            this.label_phoneNumber.Name = "label_phoneNumber";
-            this.label_phoneNumber.Size = new System.Drawing.Size(78, 13);
-            this.label_phoneNumber.TabIndex = 20;
-            this.label_phoneNumber.Text = "Phone Number";
-            // 
-            // textBox_address
-            // 
-            this.textBox_address.Location = new System.Drawing.Point(57, 166);
-            this.textBox_address.Multiline = true;
-            this.textBox_address.Name = "textBox_address";
-            this.textBox_address.Size = new System.Drawing.Size(330, 58);
-            this.textBox_address.TabIndex = 8;
-            // 
-            // label_address
-            // 
-            this.label_address.AutoSize = true;
-            this.label_address.Location = new System.Drawing.Point(60, 147);
-            this.label_address.Name = "label_address";
-            this.label_address.Size = new System.Drawing.Size(45, 13);
-            this.label_address.TabIndex = 22;
-            this.label_address.Text = "Address";
-            // 
-            // textBox_Allergies_Diseases_Meds
-            // 
-            this.textBox_Allergies_Diseases_Meds.Location = new System.Drawing.Point(103, 259);
-            this.textBox_Allergies_Diseases_Meds.Multiline = true;
-            this.textBox_Allergies_Diseases_Meds.Name = "textBox_Allergies_Diseases_Meds";
-            this.textBox_Allergies_Diseases_Meds.Size = new System.Drawing.Size(206, 162);
-            this.textBox_Allergies_Diseases_Meds.TabIndex = 9;
-            // 
-            // allergyRadio
-            // 
-            this.allergyRadio.AutoSize = true;
-            this.allergyRadio.Location = new System.Drawing.Point(12, 259);
-            this.allergyRadio.Name = "allergyRadio";
-            this.allergyRadio.Size = new System.Drawing.Size(64, 17);
-            this.allergyRadio.TabIndex = 26;
-            this.allergyRadio.TabStop = true;
-            this.allergyRadio.Text = "Allergies";
-            this.allergyRadio.UseVisualStyleBackColor = true;
-            // 
-            // diseaseRadio
-            // 
-            this.diseaseRadio.AutoSize = true;
-            this.diseaseRadio.Location = new System.Drawing.Point(12, 282);
-            this.diseaseRadio.Name = "diseaseRadio";
-            this.diseaseRadio.Size = new System.Drawing.Size(68, 17);
-            this.diseaseRadio.TabIndex = 27;
-            this.diseaseRadio.TabStop = true;
-            this.diseaseRadio.Text = "Diseases";
-            this.diseaseRadio.UseVisualStyleBackColor = true;
-            // 
             // medicationRadio
             // 
             this.medicationRadio.AutoSize = true;
-            this.medicationRadio.Location = new System.Drawing.Point(12, 305);
+            this.medicationRadio.Location = new System.Drawing.Point(12, 314);
             this.medicationRadio.Name = "medicationRadio";
             this.medicationRadio.Size = new System.Drawing.Size(82, 17);
-            this.medicationRadio.TabIndex = 28;
+            this.medicationRadio.TabIndex = 40;
             this.medicationRadio.TabStop = true;
             this.medicationRadio.Text = "Medications";
             this.medicationRadio.UseVisualStyleBackColor = true;
             // 
-            // updateButton
+            // diseaseRadio
             // 
-            this.updateButton.Location = new System.Drawing.Point(568, 458);
-            this.updateButton.Name = "updateButton";
-            this.updateButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.updateButton.Size = new System.Drawing.Size(75, 23);
-            this.updateButton.TabIndex = 30;
-            this.updateButton.Text = "Update";
-            this.updateButton.UseVisualStyleBackColor = true;
-            this.updateButton.Click += new System.EventHandler(this.checkinButton_Click);
+            this.diseaseRadio.AutoSize = true;
+            this.diseaseRadio.Location = new System.Drawing.Point(12, 291);
+            this.diseaseRadio.Name = "diseaseRadio";
+            this.diseaseRadio.Size = new System.Drawing.Size(68, 17);
+            this.diseaseRadio.TabIndex = 39;
+            this.diseaseRadio.TabStop = true;
+            this.diseaseRadio.Text = "Diseases";
+            this.diseaseRadio.UseVisualStyleBackColor = true;
+            // 
+            // allergyRadio
+            // 
+            this.allergyRadio.AutoSize = true;
+            this.allergyRadio.Location = new System.Drawing.Point(12, 268);
+            this.allergyRadio.Name = "allergyRadio";
+            this.allergyRadio.Size = new System.Drawing.Size(64, 17);
+            this.allergyRadio.TabIndex = 38;
+            this.allergyRadio.TabStop = true;
+            this.allergyRadio.Text = "Allergies";
+            this.allergyRadio.UseVisualStyleBackColor = true;
+            // 
+            // textBox_Allergies_Diseases_Meds
+            // 
+            this.textBox_Allergies_Diseases_Meds.Location = new System.Drawing.Point(103, 268);
+            this.textBox_Allergies_Diseases_Meds.Multiline = true;
+            this.textBox_Allergies_Diseases_Meds.Name = "textBox_Allergies_Diseases_Meds";
+            this.textBox_Allergies_Diseases_Meds.Size = new System.Drawing.Size(206, 162);
+            this.textBox_Allergies_Diseases_Meds.TabIndex = 33;
+            // 
+            // label_address
+            // 
+            this.label_address.AutoSize = true;
+            this.label_address.Location = new System.Drawing.Point(15, 153);
+            this.label_address.Name = "label_address";
+            this.label_address.Size = new System.Drawing.Size(45, 13);
+            this.label_address.TabIndex = 37;
+            this.label_address.Text = "Address";
+            // 
+            // textBox_address
+            // 
+            this.textBox_address.Location = new System.Drawing.Point(12, 172);
+            this.textBox_address.Multiline = true;
+            this.textBox_address.Name = "textBox_address";
+            this.textBox_address.Size = new System.Drawing.Size(330, 58);
+            this.textBox_address.TabIndex = 32;
+            // 
+            // label_phoneNumber
+            // 
+            this.label_phoneNumber.AutoSize = true;
+            this.label_phoneNumber.Location = new System.Drawing.Point(189, 100);
+            this.label_phoneNumber.Name = "label_phoneNumber";
+            this.label_phoneNumber.Size = new System.Drawing.Size(78, 13);
+            this.label_phoneNumber.TabIndex = 36;
+            this.label_phoneNumber.Text = "Phone Number";
+            // 
+            // label_ethnicity
+            // 
+            this.label_ethnicity.AutoSize = true;
+            this.label_ethnicity.Location = new System.Drawing.Point(72, 100);
+            this.label_ethnicity.Name = "label_ethnicity";
+            this.label_ethnicity.Size = new System.Drawing.Size(47, 13);
+            this.label_ethnicity.TabIndex = 35;
+            this.label_ethnicity.Text = "Ethnicity";
+            // 
+            // label_gender
+            // 
+            this.label_gender.AutoSize = true;
+            this.label_gender.Location = new System.Drawing.Point(12, 100);
+            this.label_gender.Name = "label_gender";
+            this.label_gender.Size = new System.Drawing.Size(42, 13);
+            this.label_gender.TabIndex = 34;
+            this.label_gender.Text = "Gender";
+            // 
+            // textBox_phoneNumber
+            // 
+            this.textBox_phoneNumber.Location = new System.Drawing.Point(189, 119);
+            this.textBox_phoneNumber.Name = "textBox_phoneNumber";
+            this.textBox_phoneNumber.Size = new System.Drawing.Size(100, 20);
+            this.textBox_phoneNumber.TabIndex = 31;
+            // 
+            // textBox_ethnicity
+            // 
+            this.textBox_ethnicity.Location = new System.Drawing.Point(72, 119);
+            this.textBox_ethnicity.Name = "textBox_ethnicity";
+            this.textBox_ethnicity.Size = new System.Drawing.Size(100, 20);
+            this.textBox_ethnicity.TabIndex = 30;
+            // 
+            // textBox_gender
+            // 
+            this.textBox_gender.Location = new System.Drawing.Point(12, 119);
+            this.textBox_gender.Name = "textBox_gender";
+            this.textBox_gender.Size = new System.Drawing.Size(42, 20);
+            this.textBox_gender.TabIndex = 29;
             // 
             // checkinBox
             // 
             this.checkinBox.AutoSize = true;
-            this.checkinBox.Location = new System.Drawing.Point(571, 435);
+            this.checkinBox.Location = new System.Drawing.Point(474, 436);
             this.checkinBox.Name = "checkinBox";
             this.checkinBox.Size = new System.Drawing.Size(68, 17);
-            this.checkinBox.TabIndex = 32;
+            this.checkinBox.TabIndex = 43;
             this.checkinBox.Text = "Check in";
             this.checkinBox.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(471, 459);
+            this.button1.Name = "button1";
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 42;
+            this.button1.Text = "Update";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(139, 460);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 41;
+            this.button2.Text = "Search";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Clerical
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
+            this.ClientSize = new System.Drawing.Size(720, 494);
             this.Controls.Add(this.checkinBox);
-            this.Controls.Add(this.updateButton);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.medicationRadio);
             this.Controls.Add(this.diseaseRadio);
             this.Controls.Add(this.allergyRadio);
@@ -325,14 +342,15 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.insBox);
             this.Controls.Add(this.dobBox);
             this.Controls.Add(this.ageBox);
             this.Controls.Add(this.firstNameBox);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.searchButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Clerical";
-            this.Size = new System.Drawing.Size(834, 551);
             this.Load += new System.EventHandler(this.Clerical_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -347,6 +365,7 @@
         private System.Windows.Forms.TextBox ageBox;
         private System.Windows.Forms.TextBox dobBox;
         private System.Windows.Forms.ComboBox insBox;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -354,19 +373,20 @@
         private System.Windows.Forms.ListBox patientBox;
         private System.Windows.Forms.TextBox lastNameBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox_gender;
-        private System.Windows.Forms.TextBox textBox_ethnicity;
-        private System.Windows.Forms.TextBox textBox_phoneNumber;
-        private System.Windows.Forms.Label label_gender;
-        private System.Windows.Forms.Label label_ethnicity;
-        private System.Windows.Forms.Label label_phoneNumber;
-        private System.Windows.Forms.TextBox textBox_address;
-        private System.Windows.Forms.Label label_address;
-        private System.Windows.Forms.TextBox textBox_Allergies_Diseases_Meds;
-        private System.Windows.Forms.RadioButton allergyRadio;
-        private System.Windows.Forms.RadioButton diseaseRadio;
         private System.Windows.Forms.RadioButton medicationRadio;
-        private System.Windows.Forms.Button updateButton;
+        private System.Windows.Forms.RadioButton diseaseRadio;
+        private System.Windows.Forms.RadioButton allergyRadio;
+        private System.Windows.Forms.TextBox textBox_Allergies_Diseases_Meds;
+        private System.Windows.Forms.Label label_address;
+        private System.Windows.Forms.TextBox textBox_address;
+        private System.Windows.Forms.Label label_phoneNumber;
+        private System.Windows.Forms.Label label_ethnicity;
+        private System.Windows.Forms.Label label_gender;
+        private System.Windows.Forms.TextBox textBox_phoneNumber;
+        private System.Windows.Forms.TextBox textBox_ethnicity;
+        private System.Windows.Forms.TextBox textBox_gender;
         private System.Windows.Forms.CheckBox checkinBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
