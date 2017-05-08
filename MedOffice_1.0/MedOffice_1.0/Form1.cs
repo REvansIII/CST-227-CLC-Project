@@ -4,12 +4,12 @@ using System.Data.OleDb;
 
 namespace MedOffice_1._0
 {
-    public partial class Form1 : Form
+    public partial class Main_Menu : Form
     {
         OleDbConnection conn = new OleDbConnection();
         string permission = "";
                 
-        public Form1()
+        public Main_Menu()
         {
             InitializeComponent();
             conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\Med_2.mdb;";
@@ -39,7 +39,7 @@ namespace MedOffice_1._0
             }
             if (permission.Equals("Clerical"))
             {
-                Clerical clerk = new Clerical();
+                MainClerical clerk = new MainClerical();
                 clerk.Show();
             }
             else if (permission.Equals(""))

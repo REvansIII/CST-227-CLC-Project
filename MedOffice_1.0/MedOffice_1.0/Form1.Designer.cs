@@ -1,6 +1,6 @@
 ﻿namespace MedOffice_1._0
 {
-    partial class Form1
+    partial class Main_Menu
     {
         /// <summary>
         /// Required designer variable.

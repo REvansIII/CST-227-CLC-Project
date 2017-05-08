@@ -4,11 +4,23 @@ using System.Data.OleDb;
 
 namespace MedOffice_1._0
 {
-    public partial class Clerical : Form
+    public partial class Clerical : UserControl
     {
         OleDbConnection conn = new OleDbConnection();
         OleDbConnection conn2 = new OleDbConnection();
-        string patientLast, patientFirst, ins, dob, fullPatient, age, gender, ethnicity, phone, address, disease;
+        string patientLast, patientFirst, ins, dob, fullPatient, age, gender, ethnicity, phone, address, allergies, disease, medication, policyHolder;
+        string checkin;
+
+        private static Clerical _instance;
+        public static Clerical Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Clerical();
+                return _instance;
+            }
+        }
 
         private void lastNameBox_TextChanged(object sender, EventArgs e)
         {
@@ -17,10 +29,35 @@ namespace MedOffice_1._0
 
         private void checkinButton_Click(object sender, EventArgs e)
         {
+            patientLast = lastNameBox.Text;
+            patientFirst = firstNameBox.Text;
+            checkin = "yes";
 
+            if (checkinBox.Checked)
+            {
+                conn2.Open();
+                OleDbCommand comm = new OleDbCommand();
+                comm.Connection = conn2;
+                checkin = "Yes";
+
+                //  SQL command add to database
+                comm.CommandText = "UPDATE OurPatients SET CheckedIn=[CheckedIn] +'" + checkin
+                    + "'WHERE PatientLast= '" + patientLast + "' and PatientFirst= '" + patientFirst + "'";
+
+                comm.ExecuteNonQuery();
+
+                conn2.Close(); //close connection
+
+                MessageBox.Show(fullPatient + " successfully checked in.");
+            }
         }
 
         private void apptButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
@@ -61,7 +98,9 @@ namespace MedOffice_1._0
             ethnicity = textBox_ethnicity.Text;
             phone = textBox_phoneNumber.Text;
             address = textBox_address.Text;
+            allergies = textBox_Allergies_Diseases_Meds.Text;
             disease = textBox_Allergies_Diseases_Meds.Text;
+            medication = textBox_Allergies_Diseases_Meds.Text;
 
             //open connection
             conn2.Open();
@@ -70,11 +109,11 @@ namespace MedOffice_1._0
 
             //  SQL command add to database
             comm.CommandText = "INSERT INTO OurPatients(PatientLast, PatientFirst, PatientAge" 
-                + ", PatientDOB, PatientIns, Gender, Ethnicity, PhoneNumber, Address, Allergies_Diseases_Medications)" +
+                + ", PatientDOB, PatientIns, Gender, Ethnicity, PhoneNumber, Address, Allergies, Diseases, Medications)" +
                      "VALUES ('" + patientLast + "', '" + patientFirst
                      + "', '" + age + "','" + dob + "', '"
                      + ins +"','" + gender + "', '"  + ethnicity +"', '"
-                     + phone + "','" + address + "','"+ disease + "')";
+                     + phone + "','" + address + "','"+ allergies + "', '" + disease + "', '" + medication + "')";
 
             comm.Parameters.AddWithValue("@PatientLast", patientLast);
             comm.Parameters.AddWithValue("@PatientFirst", patientFirst);
@@ -85,7 +124,9 @@ namespace MedOffice_1._0
             comm.Parameters.AddWithValue("@Ethnicity", ethnicity);
             comm.Parameters.AddWithValue("@PhoneNumber", phone);
             comm.Parameters.AddWithValue("@Address", address);
-            comm.Parameters.AddWithValue("@Allergies_Diseases_Medications", disease);
+            comm.Parameters.AddWithValue("@Allergies", allergies);
+            comm.Parameters.AddWithValue("@Diseases", disease);
+            comm.Parameters.AddWithValue("@Medications", medication);
 
             comm.ExecuteNonQuery();
 
@@ -123,6 +164,8 @@ namespace MedOffice_1._0
             address = textBox_address.Text;
             disease = textBox_Allergies_Diseases_Meds.Text;
 
+            MessageBox.Show("Lastname" + patientLast);
+
             conn.Open();
             OleDbCommand comm = new OleDbCommand();
             comm.Connection = conn;
@@ -133,8 +176,7 @@ namespace MedOffice_1._0
 
             while (reader.Read())
             {
-                patientLast = (reader["patientLast"].ToString());
-                patientFirst = (reader["PatientFirst"].ToString());
+                
                 age = (reader["PatientAge"].ToString());
                 dob = (reader["PatientDOB"].ToString());
                 ins = (reader["PatientIns"].ToString());
@@ -142,11 +184,12 @@ namespace MedOffice_1._0
                 ethnicity = (reader["Ethnicity"].ToString());
                 phone = (reader["PhoneNumber"].ToString());
                 address = (reader["Address"].ToString());
-                disease = (reader["Allergies_Diseases_Medications"].ToString());
+                allergies = (reader["Allergies"].ToString());
+                disease = (reader["Diseases"].ToString());
+                medication = (reader["Medications"].ToString());
 
-                fullPatient = ("" + patientLast + "," + patientFirst + " " 
-                    + age + " " + dob + " " + ins + " " + gender + " " + ethnicity + " " + phone + " " + address+ " " 
-                    + disease+"");
+                fullPatient = (patientLast + ", " + patientFirst + ", " + age);
+                MessageBox.Show("" + fullPatient);
                 patientBox.Items.Add(fullPatient);
             }
             

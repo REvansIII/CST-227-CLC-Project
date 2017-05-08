@@ -34,7 +34,6 @@
             this.ageBox = new System.Windows.Forms.TextBox();
             this.dobBox = new System.Windows.Forms.TextBox();
             this.insBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,13 +49,12 @@
             this.label_phoneNumber = new System.Windows.Forms.Label();
             this.textBox_address = new System.Windows.Forms.TextBox();
             this.label_address = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox_Allergies_Diseases_Meds = new System.Windows.Forms.TextBox();
             this.allergyRadio = new System.Windows.Forms.RadioButton();
             this.diseaseRadio = new System.Windows.Forms.RadioButton();
             this.medicationRadio = new System.Windows.Forms.RadioButton();
-            this.apptButton = new System.Windows.Forms.Button();
-            this.checkinButton = new System.Windows.Forms.Button();
+            this.updateButton = new System.Windows.Forms.Button();
+            this.checkinBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // searchButton
@@ -109,16 +107,6 @@
             this.insBox.Size = new System.Drawing.Size(121, 21);
             this.insBox.TabIndex = 4;
             this.insBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 18);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Welcome, clerical staff";
             // 
             // label2
             // 
@@ -249,13 +237,6 @@
             this.label_address.TabIndex = 22;
             this.label_address.Text = "Address";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(579, 60);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(243, 20);
-            this.dateTimePicker1.TabIndex = 12;
-            // 
             // textBox_Allergies_Diseases_Meds
             // 
             this.textBox_Allergies_Diseases_Meds.Location = new System.Drawing.Point(103, 259);
@@ -297,40 +278,38 @@
             this.medicationRadio.Text = "Medications";
             this.medicationRadio.UseVisualStyleBackColor = true;
             // 
-            // apptButton
+            // updateButton
             // 
-            this.apptButton.Location = new System.Drawing.Point(489, 426);
-            this.apptButton.Name = "apptButton";
-            this.apptButton.Size = new System.Drawing.Size(123, 23);
-            this.apptButton.TabIndex = 29;
-            this.apptButton.Text = "Schedule Appointment";
-            this.apptButton.UseVisualStyleBackColor = true;
-            this.apptButton.Click += new System.EventHandler(this.apptButton_Click);
+            this.updateButton.Location = new System.Drawing.Point(568, 458);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.updateButton.Size = new System.Drawing.Size(75, 23);
+            this.updateButton.TabIndex = 30;
+            this.updateButton.Text = "Update";
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.checkinButton_Click);
             // 
-            // checkinButton
+            // checkinBox
             // 
-            this.checkinButton.Location = new System.Drawing.Point(618, 426);
-            this.checkinButton.Name = "checkinButton";
-            this.checkinButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkinButton.Size = new System.Drawing.Size(75, 23);
-            this.checkinButton.TabIndex = 30;
-            this.checkinButton.Text = "Check in";
-            this.checkinButton.UseVisualStyleBackColor = true;
-            this.checkinButton.Click += new System.EventHandler(this.checkinButton_Click);
+            this.checkinBox.AutoSize = true;
+            this.checkinBox.Location = new System.Drawing.Point(571, 435);
+            this.checkinBox.Name = "checkinBox";
+            this.checkinBox.Size = new System.Drawing.Size(68, 17);
+            this.checkinBox.TabIndex = 32;
+            this.checkinBox.Text = "Check in";
+            this.checkinBox.UseVisualStyleBackColor = true;
             // 
             // Clerical
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(834, 519);
-            this.Controls.Add(this.checkinButton);
-            this.Controls.Add(this.apptButton);
+            this.Controls.Add(this.checkinBox);
+            this.Controls.Add(this.updateButton);
             this.Controls.Add(this.medicationRadio);
             this.Controls.Add(this.diseaseRadio);
             this.Controls.Add(this.allergyRadio);
             this.Controls.Add(this.textBox_Allergies_Diseases_Meds);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label_address);
             this.Controls.Add(this.textBox_address);
             this.Controls.Add(this.label_phoneNumber);
@@ -346,7 +325,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.insBox);
             this.Controls.Add(this.dobBox);
             this.Controls.Add(this.ageBox);
@@ -354,7 +332,7 @@
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.searchButton);
             this.Name = "Clerical";
-            this.Text = "MedOffice 1.0";
+            this.Size = new System.Drawing.Size(834, 551);
             this.Load += new System.EventHandler(this.Clerical_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -369,7 +347,6 @@
         private System.Windows.Forms.TextBox ageBox;
         private System.Windows.Forms.TextBox dobBox;
         private System.Windows.Forms.ComboBox insBox;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -385,12 +362,11 @@
         private System.Windows.Forms.Label label_phoneNumber;
         private System.Windows.Forms.TextBox textBox_address;
         private System.Windows.Forms.Label label_address;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox textBox_Allergies_Diseases_Meds;
         private System.Windows.Forms.RadioButton allergyRadio;
         private System.Windows.Forms.RadioButton diseaseRadio;
         private System.Windows.Forms.RadioButton medicationRadio;
-        private System.Windows.Forms.Button apptButton;
-        private System.Windows.Forms.Button checkinButton;
+        private System.Windows.Forms.Button updateButton;
+        private System.Windows.Forms.CheckBox checkinBox;
     }
 }
