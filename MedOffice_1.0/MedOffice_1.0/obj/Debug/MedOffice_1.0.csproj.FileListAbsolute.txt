@@ -24,7 +24,10 @@ C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\
 C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\bin\Debug\MedOffice_1.0.exe
 C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\bin\Debug\MedOffice_1.0.pdb
 C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1.0.csprojResolveAssemblyReference.cache
-C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1._0.Form1.resources
 C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1._0.Properties.Resources.resources
 C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1._0.Clerical.resources
 C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1.0.csproj.GenerateResource.Cache
+C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1._0.Main_Menu.resources
+C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1._0.InsInfoForm.resources
+C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1._0.MainClerical.resources
+C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1._0.AddAppointment.resources
