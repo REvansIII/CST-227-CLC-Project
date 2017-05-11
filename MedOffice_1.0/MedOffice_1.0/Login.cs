@@ -19,7 +19,7 @@ namespace MedOffice_1._0
         public Login()
         {
             InitializeComponent();
-            conn.ConnectionString = ConnectionString.Conn;
+            conn.ConnectionString = OurConnection.Conn;
         }
 
         private void loginButton_Click(object sender, EventArgs e)

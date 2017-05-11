@@ -85,7 +85,7 @@ namespace MedOffice_1._0
         public Clerical()
         {
             InitializeComponent();
-            conn.ConnectionString = ConnectionString.Conn;
+            conn.ConnectionString = OurConnection.Conn;
         }
 
         private void checkinButton_Click(object sender, EventArgs e)
