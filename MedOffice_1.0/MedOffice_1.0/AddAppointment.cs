@@ -17,7 +17,7 @@ namespace MedOffice_1._0
         string patientLast, patientFirst, apptDate, apptTime, age, apptType;
         public AddAppointment()
         {
-            conn.ConnectionString = ConnectionString.Conn;
+            conn.ConnectionString = OurConnection.Conn;
             InitializeComponent();
         }
 
