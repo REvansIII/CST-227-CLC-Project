@@ -81,7 +81,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.LightBlue;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(30, 94);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(30, 13);
@@ -150,7 +150,7 @@
             this.firstNameBox.Size = new System.Drawing.Size(100, 20);
             this.firstNameBox.TabIndex = 14;
             // 
-            // AddApointment
+            // AddAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -168,7 +168,7 @@
             this.Controls.Add(this.dateBox);
             this.Controls.Add(this.lastNameBox);
             this.Controls.Add(this.firstNameBox);
-            this.Name = "AddApointment";
+            this.Name = "AddAppointment";
             this.Load += new System.EventHandler(this.AddApointment_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

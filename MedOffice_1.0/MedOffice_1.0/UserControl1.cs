@@ -127,35 +127,41 @@ namespace MedOffice_1._0
             disease = textBox_Allergies_Diseases_Meds.Text;
 
             MessageBox.Show("Lastname" + patientLast);
-
-            conn.Open();
-            OleDbCommand comm = new OleDbCommand();
-            comm.Connection = conn;
-            comm.CommandText = "SELECT * FROM OurPatients WHERE PatientLast= '"
-                + patientLast + "' and PatientFirst= '" + patientFirst
-                + "'";
-            OleDbDataReader reader = comm.ExecuteReader();
-
-            while (reader.Read())
+            try
             {
+                conn.Open();
+                OleDbCommand comm = new OleDbCommand();
+                comm.Connection = conn;
+                comm.CommandText = "SELECT * FROM OurPatients WHERE PatientLast= '"
+                    + patientLast + "' and PatientFirst= '" + patientFirst
+                    + "'";
+                OleDbDataReader reader = comm.ExecuteReader();
 
-                age = (reader["PatientAge"].ToString());
-                dob = (reader["PatientDOB"].ToString());
-                ins = (reader["PatientIns"].ToString());
-                gender = (reader["Gender"].ToString());
-                ethnicity = (reader["Ethnicity"].ToString());
-                phone = (reader["PhoneNumber"].ToString());
-                address = (reader["Address"].ToString());
-                allergies = (reader["Allergies"].ToString());
-                disease = (reader["Diseases"].ToString());
-                medication = (reader["Medications"].ToString());
+                while (reader.Read())
+                {
 
-                fullPatient = (patientLast + ", " + patientFirst + ", " + age);
-                MessageBox.Show("" + fullPatient);
-                patientBox.Items.Add(fullPatient);
+                    age = (reader["PatientAge"].ToString());
+                    dob = (reader["PatientDOB"].ToString());
+                    ins = (reader["PatientIns"].ToString());
+                    gender = (reader["Gender"].ToString());
+                    ethnicity = (reader["Ethnicity"].ToString());
+                    phone = (reader["PhoneNumber"].ToString());
+                    address = (reader["Address"].ToString());
+                    allergies = (reader["Allergies"].ToString());
+                    disease = (reader["Diseases"].ToString());
+                    medication = (reader["Medications"].ToString());
+
+                    fullPatient = (patientLast + ", " + patientFirst + ", " + age);
+                    MessageBox.Show("" + fullPatient);
+                    patientBox.Items.Add(fullPatient);
+                }
+
+                conn.Close();
             }
-
-            conn.Close();
+            catch (Exception)
+            {
+            MessageBox.Show("Unable to access DB. Please check your DB connectivity settings.", "Unable to connect to DB", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
         }
     }
 }
