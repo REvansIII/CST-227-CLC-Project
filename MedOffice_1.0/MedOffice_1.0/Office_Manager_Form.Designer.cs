@@ -30,10 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.cboEmployees = new System.Windows.Forms.ComboBox();
-            this.loginsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.medOfficeDBDataSet = new MedOffice_1._0.MedOfficeDBDataSet();
             this.loginsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.medOfficeDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.medOfficeDBDataSet = new MedOffice_1._0.MedOfficeDBDataSet();
             this.lblEmployee = new System.Windows.Forms.Label();
             this.loginsTableAdapter = new MedOffice_1._0.MedOfficeDBDataSetTableAdapters.LoginsTableAdapter();
             this.btnViewSchedule = new System.Windows.Forms.Button();
@@ -46,15 +45,10 @@
             this.Username = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Schedule = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Work_Weekends = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.loginsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.loginsBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.loginsBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medOfficeDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medOfficeDBDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medOfficeDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginsBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginsBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // cboEmployees
@@ -67,16 +61,6 @@
             this.cboEmployees.Size = new System.Drawing.Size(173, 21);
             this.cboEmployees.TabIndex = 0;
             // 
-            // loginsBindingSource3
-            // 
-            this.loginsBindingSource3.DataMember = "Logins";
-            this.loginsBindingSource3.DataSource = this.medOfficeDBDataSet;
-            // 
-            // medOfficeDBDataSet
-            // 
-            this.medOfficeDBDataSet.DataSetName = "MedOfficeDBDataSet";
-            this.medOfficeDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // loginsBindingSource
             // 
             this.loginsBindingSource.DataMember = "Logins";
@@ -86,6 +70,11 @@
             // 
             this.medOfficeDBDataSetBindingSource.DataSource = this.medOfficeDBDataSet;
             this.medOfficeDBDataSetBindingSource.Position = 0;
+            // 
+            // medOfficeDBDataSet
+            // 
+            this.medOfficeDBDataSet.DataSetName = "MedOfficeDBDataSet";
+            this.medOfficeDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblEmployee
             // 
@@ -186,21 +175,11 @@
             this.Work_Weekends.Text = "Work_Weekends";
             this.Work_Weekends.Width = 100;
             // 
-            // loginsBindingSource2
-            // 
-            this.loginsBindingSource2.DataMember = "Logins";
-            this.loginsBindingSource2.DataSource = this.medOfficeDBDataSetBindingSource;
-            // 
-            // loginsBindingSource4
-            // 
-            this.loginsBindingSource4.DataMember = "Logins";
-            this.loginsBindingSource4.DataSource = this.medOfficeDBDataSet;
-            // 
             // Office_Manager_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 331);
+            this.ClientSize = new System.Drawing.Size(331, 319);
             this.Controls.Add(this.lstAllSchedules);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cbWeekends);
@@ -212,13 +191,10 @@
             this.Name = "Office_Manager_Form";
             this.Text = "Staffing Form";
             this.Load += new System.EventHandler(this.Office_Manager_Form_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.loginsBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medOfficeDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medOfficeDBDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medOfficeDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginsBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginsBindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,8 +218,5 @@
         private System.Windows.Forms.ColumnHeader Username;
         private System.Windows.Forms.ColumnHeader Schedule;
         private System.Windows.Forms.ColumnHeader Work_Weekends;
-        private System.Windows.Forms.BindingSource loginsBindingSource3;
-        private System.Windows.Forms.BindingSource loginsBindingSource2;
-        private System.Windows.Forms.BindingSource loginsBindingSource4;
     }
 }

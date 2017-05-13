@@ -23,10 +23,30 @@ namespace MedOffice_1._0
             //Gets DB connectionString from the connectionString class
             conn.ConnectionString = OurConnection.Conn;
         }
-
+        //Currently only loads the cboEmployees combobox with employees names and value member of User_ID
         private void Office_Manager_Form_Load(object sender, EventArgs e)
         {
-        //TODO add combobox config to load usernames as text and userID as value.
+           //Loads cboEmployees combobox with employees in DB. 
+            try
+            {
+                conn.Open();
+                OleDbCommand comm = new OleDbCommand();
+                comm.Connection = conn;
+                comm.CommandText = "SELECT User_ID, Username FROM Logins";
+                String cmd = "SELECT User_ID, Username FROM Logins";
+                OleDbDataAdapter da = new OleDbDataAdapter(cmd, conn);
+                DataTable ds = new DataTable();
+               da.Fill(ds);
+               cboEmployees.DataSource = ds;
+               cboEmployees.DisplayMember = "Username";
+               cboEmployees.ValueMember = "User_ID";
+               comm.ExecuteNonQuery();
+               conn.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Unable to access DB. Please check your DB connectivity settings.", "Unable to connect to DB", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
         }
 
         //Adds schedule to employee
@@ -62,7 +82,8 @@ namespace MedOffice_1._0
                 Weekends = "No";
             }
         }
-
+       
+        //Displays all of the users and their schedules in the listview
         private void btnViewSchedule_Click(object sender, EventArgs e)
         {
             lstAllSchedules.View = View.Details;
@@ -92,7 +113,6 @@ namespace MedOffice_1._0
                 MessageBox.Show("Unable to access DB. Please check your DB connectivity settings.", "Unable to connect to DB", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
         }
-
-
+    
     }
 }
