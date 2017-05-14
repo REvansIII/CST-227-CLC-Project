@@ -7,14 +7,14 @@ using System.Data.OleDb;
 
 namespace MedOffice_1._0
 {
-    public static class OurConnection
+    public static class ConnectionString
     {
         //Edit and add your connection to the DB here
-        private static string conn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\xdark\Documents\CST-227-CLC-Project\MedOfficeDB.accdb;
+        private static string conn = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Robbie\Documents\MedOfficeDB_Test_13May.mdb;
                                      Persist Security Info=False;";
         
         //Get and Set for connection string
-        public static string Conn
+        public static string Conn 
         {
             get
             {

@@ -1,18 +1,27 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
 using System.Data.OleDb;
 
 namespace MedOffice_1._0
 {
-    public partial class Main_Menu : Form
+    public partial class Form1 : Form
     {
         OleDbConnection conn = new OleDbConnection();
         string permission = "";
                 
-        public Main_Menu()
+        public Form1()
         {
             InitializeComponent();
-            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\Med_2.mdb;";
+            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\xdark\Documents\MedOfficeDB.accdb;
+Persist Security Info=False;";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,7 +48,7 @@ namespace MedOffice_1._0
             }
             if (permission.Equals("Clerical"))
             {
-                MainClerical clerk = new MainClerical();
+                Clerical clerk = new Clerical();
                 clerk.Show();
             }
             else if (permission.Equals(""))

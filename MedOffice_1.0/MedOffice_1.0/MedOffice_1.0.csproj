@@ -47,12 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddAppointment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddAppointment.Designer.cs">
-      <DependentUpon>AddAppointment.cs</DependentUpon>
-    </Compile>
     <Compile Include="ConnectionString.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -71,31 +65,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MedOfficeDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Office_Manager_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Office_Manager_Form.Designer.cs">
-      <DependentUpon>Office_Manager_Form.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddAppointment.resx">
-      <DependentUpon>AddAppointment.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main Menu.resx">
       <DependentUpon>Main Menu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Office_Manager_Form.resx">
-      <DependentUpon>Office_Manager_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,6 +95,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
