@@ -45,7 +45,6 @@
             this.medicationRadio = new System.Windows.Forms.RadioButton();
             this.diseaseRadio = new System.Windows.Forms.RadioButton();
             this.allergyRadio = new System.Windows.Forms.RadioButton();
-            this.textBox_Allergies_Diseases_Meds = new System.Windows.Forms.TextBox();
             this.label_address = new System.Windows.Forms.Label();
             this.textBox_address = new System.Windows.Forms.TextBox();
             this.label_phoneNumber = new System.Windows.Forms.Label();
@@ -56,12 +55,16 @@
             this.textBox_gender = new System.Windows.Forms.TextBox();
             this.checkinBox = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.updateMed = new System.Windows.Forms.Button();
+            this.textBox_Allergies_Diseases_Meds = new System.Windows.Forms.TextBox();
+            this.medListbox = new System.Windows.Forms.ListBox();
+            this.addMedButton = new System.Windows.Forms.Button();
+            this.removeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(130, 321);
+            this.searchButton.Location = new System.Drawing.Point(133, 474);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(75, 23);
             this.searchButton.TabIndex = 0;
@@ -71,7 +74,7 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(14, 459);
+            this.saveButton.Location = new System.Drawing.Point(15, 474);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(112, 23);
             this.saveButton.TabIndex = 1;
@@ -189,6 +192,7 @@
             this.medicationRadio.TabStop = true;
             this.medicationRadio.Text = "Medications";
             this.medicationRadio.UseVisualStyleBackColor = true;
+            this.medicationRadio.CheckedChanged += new System.EventHandler(this.medicationRadio_CheckedChanged);
             // 
             // diseaseRadio
             // 
@@ -200,6 +204,7 @@
             this.diseaseRadio.TabStop = true;
             this.diseaseRadio.Text = "Diseases";
             this.diseaseRadio.UseVisualStyleBackColor = true;
+            this.diseaseRadio.CheckedChanged += new System.EventHandler(this.diseaseRadio_CheckedChanged);
             // 
             // allergyRadio
             // 
@@ -211,14 +216,7 @@
             this.allergyRadio.TabStop = true;
             this.allergyRadio.Text = "Allergies";
             this.allergyRadio.UseVisualStyleBackColor = true;
-            // 
-            // textBox_Allergies_Diseases_Meds
-            // 
-            this.textBox_Allergies_Diseases_Meds.Location = new System.Drawing.Point(103, 268);
-            this.textBox_Allergies_Diseases_Meds.Multiline = true;
-            this.textBox_Allergies_Diseases_Meds.Name = "textBox_Allergies_Diseases_Meds";
-            this.textBox_Allergies_Diseases_Meds.Size = new System.Drawing.Size(206, 162);
-            this.textBox_Allergies_Diseases_Meds.TabIndex = 33;
+            this.allergyRadio.CheckedChanged += new System.EventHandler(this.allergyRadio_CheckedChanged);
             // 
             // label_address
             // 
@@ -305,14 +303,51 @@
             this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // updateMed
             // 
-            this.button2.Location = new System.Drawing.Point(139, 460);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 41;
-            this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = true;
+            this.updateMed.Location = new System.Drawing.Point(66, 432);
+            this.updateMed.Name = "updateMed";
+            this.updateMed.Size = new System.Drawing.Size(154, 23);
+            this.updateMed.TabIndex = 44;
+            this.updateMed.Text = "Save allergy/med/disease";
+            this.updateMed.UseVisualStyleBackColor = true;
+            this.updateMed.Click += new System.EventHandler(this.updateMed_Click);
+            // 
+            // textBox_Allergies_Diseases_Meds
+            // 
+            this.textBox_Allergies_Diseases_Meds.Location = new System.Drawing.Point(100, 267);
+            this.textBox_Allergies_Diseases_Meds.Multiline = true;
+            this.textBox_Allergies_Diseases_Meds.Name = "textBox_Allergies_Diseases_Meds";
+            this.textBox_Allergies_Diseases_Meds.Size = new System.Drawing.Size(167, 18);
+            this.textBox_Allergies_Diseases_Meds.TabIndex = 45;
+            // 
+            // medListbox
+            // 
+            this.medListbox.FormattingEnabled = true;
+            this.medListbox.Location = new System.Drawing.Point(100, 291);
+            this.medListbox.Name = "medListbox";
+            this.medListbox.Size = new System.Drawing.Size(200, 134);
+            this.medListbox.TabIndex = 46;
+            // 
+            // addMedButton
+            // 
+            this.addMedButton.Location = new System.Drawing.Point(273, 262);
+            this.addMedButton.Name = "addMedButton";
+            this.addMedButton.Size = new System.Drawing.Size(36, 23);
+            this.addMedButton.TabIndex = 47;
+            this.addMedButton.Text = "Add";
+            this.addMedButton.UseVisualStyleBackColor = true;
+            this.addMedButton.Click += new System.EventHandler(this.addMedButton_Click);
+            // 
+            // removeButton
+            // 
+            this.removeButton.Location = new System.Drawing.Point(226, 431);
+            this.removeButton.Name = "removeButton";
+            this.removeButton.Size = new System.Drawing.Size(75, 23);
+            this.removeButton.TabIndex = 48;
+            this.removeButton.Text = "Remove";
+            this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
             // Clerical
             // 
@@ -320,13 +355,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(720, 494);
+            this.Controls.Add(this.removeButton);
+            this.Controls.Add(this.addMedButton);
+            this.Controls.Add(this.medListbox);
+            this.Controls.Add(this.textBox_Allergies_Diseases_Meds);
+            this.Controls.Add(this.updateMed);
             this.Controls.Add(this.checkinBox);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.medicationRadio);
             this.Controls.Add(this.diseaseRadio);
             this.Controls.Add(this.allergyRadio);
-            this.Controls.Add(this.textBox_Allergies_Diseases_Meds);
             this.Controls.Add(this.label_address);
             this.Controls.Add(this.textBox_address);
             this.Controls.Add(this.label_phoneNumber);
@@ -376,7 +414,6 @@
         private System.Windows.Forms.RadioButton medicationRadio;
         private System.Windows.Forms.RadioButton diseaseRadio;
         private System.Windows.Forms.RadioButton allergyRadio;
-        private System.Windows.Forms.TextBox textBox_Allergies_Diseases_Meds;
         private System.Windows.Forms.Label label_address;
         private System.Windows.Forms.TextBox textBox_address;
         private System.Windows.Forms.Label label_phoneNumber;
@@ -387,6 +424,10 @@
         private System.Windows.Forms.TextBox textBox_gender;
         private System.Windows.Forms.CheckBox checkinBox;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button updateMed;
+        private System.Windows.Forms.TextBox textBox_Allergies_Diseases_Meds;
+        private System.Windows.Forms.ListBox medListbox;
+        private System.Windows.Forms.Button addMedButton;
+        private System.Windows.Forms.Button removeButton;
     }
 }
