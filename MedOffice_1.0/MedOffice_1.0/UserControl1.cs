@@ -16,7 +16,100 @@ namespace MedOffice_1._0
         //Class level variables
         OleDbConnection conn = new OleDbConnection();
         string patientLast, patientFirst, ins, dob, fullPatient, age, gender, ethnicity, phone;
-        string checkin, address, allergies, disease, medication, policyHolder;
+
+        private void updateMed_Click(object sender, EventArgs e)
+        {
+            patientLast = lastNameBox.Text;
+            patientFirst = firstNameBox.Text;
+            allMedDis = medListbox.Text;
+            string tempAll = "";
+            disease = medListbox.Text;
+            medication = medListbox.Text;
+            List<string> allArr = new List<string>();
+
+            OleDbCommand comm = new OleDbCommand();
+            comm.Connection = conn;
+
+            for (int i = 0; i < medListbox.Items.Count; i++)
+            {
+                medListbox.SetSelected(i, true);
+                allArr.Add(medListbox.SelectedItem.ToString());
+            }
+            for (int j = 0; j < allArr.Count; j++)
+            {
+                if (allMedDis == "")
+                {
+                    allMedDis = (allArr[j].ToString());
+                    tempAll = allMedDis;
+                }
+                else if (allMedDis != "")
+                {
+                    allMedDis = (tempAll + ", " + allArr[j].ToString());
+                    tempAll = allMedDis;
+                }
+            }
+            if (allergyRadio.Checked)
+            {
+                conn.Open();
+                comm.CommandText = "UPDATE OurPatients SET [Allergies]= '"
+                    + allMedDis + "' WHERE PatientLast= '" + patientLast + "' and PatientFirst= '"
+                    + patientFirst + "'";
+                comm.ExecuteNonQuery();
+                conn.Close();
+            }
+            else if (diseaseRadio.Checked)
+            {
+                conn.Open();
+                comm.CommandText = "UPDATE OurPatients SET [Diseases]= '"
+                    + allMedDis + "' WHERE PatientLast= '" + patientLast + "' and PatientFirst= '"
+                    + patientFirst + "'";
+                comm.ExecuteNonQuery();
+                conn.Close();
+            }
+            else if (medicationRadio.Checked)
+            {
+                conn.Open();
+                comm.CommandText = "UPDATE OurPatients SET [Medications]= '"
+                    + allMedDis + "' WHERE PatientLast= '" + patientLast + "' and PatientFirst= '"
+                    + patientFirst + "'";
+                comm.ExecuteNonQuery();
+                conn.Close();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addMedButton_Click(object sender, EventArgs e)
+        {
+            medListbox.Items.Add(textBox_Allergies_Diseases_Meds.Text);
+            textBox_Allergies_Diseases_Meds.Clear();
+        }
+
+        private void allergyRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            medListbox.Items.Clear();
+        }
+
+        private void diseaseRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            medListbox.Items.Clear();
+        }
+
+        private void medicationRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            medListbox.Items.Clear();
+        }
+
+        private void removeButton_Click(object sender, EventArgs e)
+        {
+            string selectedItem = medListbox.SelectedItem.ToString();
+            medListbox.Items.Remove(selectedItem);
+        }
+
+        string checkin, address, allMedDis, disease, medication, policyHolder;
 
         private static Clerical _instance;
 
@@ -41,9 +134,6 @@ namespace MedOffice_1._0
             ethnicity = textBox_ethnicity.Text;
             phone = textBox_phoneNumber.Text;
             address = textBox_address.Text;
-            allergies = textBox_Allergies_Diseases_Meds.Text;
-            disease = textBox_Allergies_Diseases_Meds.Text;
-            medication = textBox_Allergies_Diseases_Meds.Text;
 
             //open connection
             conn.Open();
@@ -51,29 +141,28 @@ namespace MedOffice_1._0
             comm.Connection = conn;
 
             //  SQL command add to database
-            comm.CommandText = "INSERT INTO OurPatients(PatientLast, PatientFirst, PatientAge"
-                + ", PatientDOB, PatientIns, Gender, Ethnicity, PhoneNumber, Address, Allergies, Diseases, Medications)" +
+            comm.CommandText = "INSERT INTO OurPatients(PatientLast, PatientFirst)" 
+                /*, PatientAge"
+                + ", PatientDOB, PatientIns, Gender, Ethnicity, PhoneNumber, Address)"*/ +
                      "VALUES ('" + patientLast + "', '" + patientFirst
-                     + "', '" + age + "','" + dob + "', '"
+                     + "')";/*, '" + age + "','" + dob + "', '"
                      + ins + "','" + gender + "', '" + ethnicity + "', '"
-                     + phone + "','" + address + "','" + allergies + "', '" + disease + "', '" + medication + "')";
+                     + phone + "','" + address + "')";*/
 
             comm.Parameters.AddWithValue("@PatientLast", patientLast);
-            comm.Parameters.AddWithValue("@PatientFirst", patientFirst);
+            comm.Parameters.AddWithValue("@PatientFirst", patientFirst);/*
             comm.Parameters.AddWithValue("@PatientAge", age);
             comm.Parameters.AddWithValue("@PatientDOB", dob);
             comm.Parameters.AddWithValue("@PatientIns", ins);
             comm.Parameters.AddWithValue("@Gender", gender);
             comm.Parameters.AddWithValue("@Ethnicity", ethnicity);
             comm.Parameters.AddWithValue("@PhoneNumber", phone);
-            comm.Parameters.AddWithValue("@Address", address);
-            comm.Parameters.AddWithValue("@Allergies", allergies);
-            comm.Parameters.AddWithValue("@Diseases", disease);
-            comm.Parameters.AddWithValue("@Medications", medication);
+            comm.Parameters.AddWithValue("@Address", address);*/
 
             comm.ExecuteNonQuery();
 
             conn.Close();
+            
         }
 
         private void Clerical_Load(object sender, EventArgs e)
@@ -124,9 +213,7 @@ namespace MedOffice_1._0
             ethnicity = textBox_ethnicity.Text;
             phone = textBox_phoneNumber.Text;
             address = textBox_address.Text;
-            disease = textBox_Allergies_Diseases_Meds.Text;
-
-            MessageBox.Show("Lastname" + patientLast);
+            
             try
             {
                 conn.Open();
@@ -147,9 +234,6 @@ namespace MedOffice_1._0
                     ethnicity = (reader["Ethnicity"].ToString());
                     phone = (reader["PhoneNumber"].ToString());
                     address = (reader["Address"].ToString());
-                    allergies = (reader["Allergies"].ToString());
-                    disease = (reader["Diseases"].ToString());
-                    medication = (reader["Medications"].ToString());
 
                     fullPatient = (patientLast + ", " + patientFirst + ", " + age);
                     MessageBox.Show("" + fullPatient);
