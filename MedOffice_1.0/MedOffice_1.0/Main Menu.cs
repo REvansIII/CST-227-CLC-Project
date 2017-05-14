@@ -18,6 +18,7 @@ namespace MedOffice_1._0
         public Main_Menu(String username, Boolean cForm, Boolean oForm, Boolean aForm)
         {
             InitializeComponent();
+            Size = new Size(1000, 700);
             Welcomelbl.Text = "Welcome " + username;
             //Enables the forms the users have access to
             clericalFormToolStripMenuItem.Enabled = cForm;
