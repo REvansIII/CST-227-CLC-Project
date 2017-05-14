@@ -175,6 +175,7 @@ namespace MedOffice_1._0
         {
             InitializeComponent();
             conn.ConnectionString = OurConnection.Conn;
+            Size = new Size(800,600);
         }
 
         private void checkinButton_Click(object sender, EventArgs e)
