@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.OleDb;
 
 namespace MedOffice_1._0
@@ -16,7 +8,7 @@ namespace MedOffice_1._0
     {
         OleDbConnection conn = new OleDbConnection();
         //OleDbConnection conn2 = new OleDbConnection();
-        string patientLast, patientFirst, ins, dob, fullPatient, age;
+        public string patientLast, patientFirst, ins, dob, fullPatient, age;
 
         private void saveButton_Click(object sender, EventArgs e)
         {
@@ -76,6 +68,7 @@ namespace MedOffice_1._0
             conn.Open();
             OleDbCommand comm = new OleDbCommand();
             comm.Connection = conn;
+
             comm.CommandText = "SELECT * FROM OurPatients WHERE PatientLast= '"
                 + patientLast + "' and PatientFirst= '" + patientFirst
                 + "'";
@@ -83,7 +76,7 @@ namespace MedOffice_1._0
 
             while (reader.Read())
             {
-                patientLast = (reader["patientLast"].ToString());
+                patientLast = (reader["PatientLast"].ToString());
                 patientFirst = (reader["PatientFirst"].ToString());
                 age = (reader["PatientAge"].ToString());
                 dob = (reader["PatientDOB"].ToString());

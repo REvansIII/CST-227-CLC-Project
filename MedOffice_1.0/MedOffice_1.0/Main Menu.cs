@@ -32,7 +32,15 @@ namespace MedOffice_1._0
             //Opens nClerical form in the MDI container
             nClerical.MdiParent = this;
             nClerical.Show();
+            
+
         }
 
+        private void testResultsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reports reports = new Reports();
+            reports.Show();
+            this.Hide();
+        }
     }
 }

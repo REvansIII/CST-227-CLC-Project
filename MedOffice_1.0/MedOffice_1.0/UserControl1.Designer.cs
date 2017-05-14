@@ -50,7 +50,7 @@
             this.searchButton.Location = new System.Drawing.Point(246, 134);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(75, 23);
-            this.searchButton.TabIndex = 0;
+            this.searchButton.TabIndex = 5;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
@@ -60,7 +60,7 @@
             this.saveButton.Location = new System.Drawing.Point(351, 134);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(112, 23);
-            this.saveButton.TabIndex = 1;
+            this.saveButton.TabIndex = 6;
             this.saveButton.Text = "Save New Patient";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
@@ -70,21 +70,21 @@
             this.firstNameBox.Location = new System.Drawing.Point(182, 108);
             this.firstNameBox.Name = "firstNameBox";
             this.firstNameBox.Size = new System.Drawing.Size(100, 20);
-            this.firstNameBox.TabIndex = 2;
+            this.firstNameBox.TabIndex = 1;
             // 
             // ageBox
             // 
             this.ageBox.Location = new System.Drawing.Point(288, 108);
             this.ageBox.Name = "ageBox";
             this.ageBox.Size = new System.Drawing.Size(100, 20);
-            this.ageBox.TabIndex = 3;
+            this.ageBox.TabIndex = 2;
             // 
             // dobBox
             // 
             this.dobBox.Location = new System.Drawing.Point(394, 108);
             this.dobBox.Name = "dobBox";
             this.dobBox.Size = new System.Drawing.Size(100, 20);
-            this.dobBox.TabIndex = 4;
+            this.dobBox.TabIndex = 3;
             // 
             // insBox
             // 
@@ -93,7 +93,7 @@
             this.insBox.Location = new System.Drawing.Point(500, 108);
             this.insBox.Name = "insBox";
             this.insBox.Size = new System.Drawing.Size(121, 21);
-            this.insBox.TabIndex = 5;
+            this.insBox.TabIndex = 4;
             this.insBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
@@ -148,14 +148,14 @@
             this.patientBox.Location = new System.Drawing.Point(182, 189);
             this.patientBox.Name = "patientBox";
             this.patientBox.Size = new System.Drawing.Size(312, 108);
-            this.patientBox.TabIndex = 11;
+            this.patientBox.TabIndex = 7;
             // 
             // selectButton
             // 
             this.selectButton.Location = new System.Drawing.Point(302, 317);
             this.selectButton.Name = "selectButton";
             this.selectButton.Size = new System.Drawing.Size(75, 23);
-            this.selectButton.TabIndex = 12;
+            this.selectButton.TabIndex = 8;
             this.selectButton.Text = "Select";
             this.selectButton.UseVisualStyleBackColor = true;
             // 
@@ -164,7 +164,7 @@
             this.lastNameBox.Location = new System.Drawing.Point(76, 108);
             this.lastNameBox.Name = "lastNameBox";
             this.lastNameBox.Size = new System.Drawing.Size(100, 20);
-            this.lastNameBox.TabIndex = 13;
+            this.lastNameBox.TabIndex = 0;
             // 
             // label6
             // 
@@ -198,6 +198,7 @@
             this.Controls.Add(this.searchButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Clerical";
+            this.Text = "MedOffice_1.0";
             this.Load += new System.EventHandler(this.Clerical_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
