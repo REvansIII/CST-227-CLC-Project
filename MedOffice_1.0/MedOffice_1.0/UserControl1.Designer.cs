@@ -43,65 +43,54 @@
             this.selectButton = new System.Windows.Forms.Button();
             this.lastNameBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox_gender = new System.Windows.Forms.TextBox();
-            this.textBox_ethnicity = new System.Windows.Forms.TextBox();
-            this.textBox_phoneNumber = new System.Windows.Forms.TextBox();
-            this.label_gender = new System.Windows.Forms.Label();
-            this.label_ethnicity = new System.Windows.Forms.Label();
-            this.label_phoneNumber = new System.Windows.Forms.Label();
-            this.textBox_address = new System.Windows.Forms.TextBox();
-            this.label_address = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox_Allergies_Diseases_Meds = new System.Windows.Forms.TextBox();
-            this.label_Allergies_Diseases_Meds = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(234, 484);
+            this.searchButton.Location = new System.Drawing.Point(246, 134);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(75, 23);
-            this.searchButton.TabIndex = 11;
+            this.searchButton.TabIndex = 5;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(60, 484);
+            this.saveButton.Location = new System.Drawing.Point(351, 134);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(112, 23);
-            this.saveButton.TabIndex = 10;
+            this.saveButton.TabIndex = 6;
             this.saveButton.Text = "Save New Patient";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // firstNameBox
             // 
-            this.firstNameBox.Location = new System.Drawing.Point(163, 59);
+            this.firstNameBox.Location = new System.Drawing.Point(182, 108);
             this.firstNameBox.Name = "firstNameBox";
             this.firstNameBox.Size = new System.Drawing.Size(100, 20);
             this.firstNameBox.TabIndex = 1;
             // 
             // ageBox
             // 
-            this.ageBox.Location = new System.Drawing.Point(269, 59);
+            this.ageBox.Location = new System.Drawing.Point(288, 108);
             this.ageBox.Name = "ageBox";
-            this.ageBox.Size = new System.Drawing.Size(30, 20);
+            this.ageBox.Size = new System.Drawing.Size(100, 20);
             this.ageBox.TabIndex = 2;
-            this.ageBox.TextChanged += new System.EventHandler(this.ageBox_TextChanged);
             // 
             // dobBox
             // 
-            this.dobBox.Location = new System.Drawing.Point(312, 59);
+            this.dobBox.Location = new System.Drawing.Point(394, 108);
             this.dobBox.Name = "dobBox";
             this.dobBox.Size = new System.Drawing.Size(100, 20);
             this.dobBox.TabIndex = 3;
             // 
             // insBox
             // 
+            this.insBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.insBox.FormattingEnabled = true;
-            this.insBox.Location = new System.Drawing.Point(430, 59);
+            this.insBox.Location = new System.Drawing.Point(500, 108);
             this.insBox.Name = "insBox";
             this.insBox.Size = new System.Drawing.Size(121, 21);
             this.insBox.TabIndex = 4;
@@ -120,7 +109,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 43);
+            this.label2.Location = new System.Drawing.Point(98, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 7;
@@ -129,7 +118,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(266, 43);
+            this.label3.Location = new System.Drawing.Point(327, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 8;
@@ -138,7 +127,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(309, 43);
+            this.label4.Location = new System.Drawing.Point(400, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 13);
             this.label4.TabIndex = 9;
@@ -147,7 +136,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(427, 43);
+            this.label5.Location = new System.Drawing.Point(533, 92);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 10;
@@ -156,147 +145,42 @@
             // patientBox
             // 
             this.patientBox.FormattingEnabled = true;
-            this.patientBox.Location = new System.Drawing.Point(430, 247);
+            this.patientBox.Location = new System.Drawing.Point(182, 189);
             this.patientBox.Name = "patientBox";
-            this.patientBox.Size = new System.Drawing.Size(351, 173);
-            this.patientBox.TabIndex = 13;
+            this.patientBox.Size = new System.Drawing.Size(312, 108);
+            this.patientBox.TabIndex = 7;
             // 
             // selectButton
             // 
-            this.selectButton.Location = new System.Drawing.Point(552, 484);
+            this.selectButton.Location = new System.Drawing.Point(302, 317);
             this.selectButton.Name = "selectButton";
             this.selectButton.Size = new System.Drawing.Size(75, 23);
-            this.selectButton.TabIndex = 14;
+            this.selectButton.TabIndex = 8;
             this.selectButton.Text = "Select";
             this.selectButton.UseVisualStyleBackColor = true;
-            this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
             // 
             // lastNameBox
             // 
-            this.lastNameBox.Location = new System.Drawing.Point(57, 59);
+            this.lastNameBox.Location = new System.Drawing.Point(76, 108);
             this.lastNameBox.Name = "lastNameBox";
             this.lastNameBox.Size = new System.Drawing.Size(100, 20);
             this.lastNameBox.TabIndex = 0;
-            this.lastNameBox.TextChanged += new System.EventHandler(this.lastNameBox_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(160, 43);
+            this.label6.Location = new System.Drawing.Point(201, 92);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 13);
             this.label6.TabIndex = 14;
             this.label6.Text = "First Name";
-            // 
-            // textBox_gender
-            // 
-            this.textBox_gender.Location = new System.Drawing.Point(57, 113);
-            this.textBox_gender.Name = "textBox_gender";
-            this.textBox_gender.Size = new System.Drawing.Size(42, 20);
-            this.textBox_gender.TabIndex = 5;
-            this.textBox_gender.TextChanged += new System.EventHandler(this.textBox_gender_TextChanged);
-            // 
-            // textBox_ethnicity
-            // 
-            this.textBox_ethnicity.Location = new System.Drawing.Point(117, 113);
-            this.textBox_ethnicity.Name = "textBox_ethnicity";
-            this.textBox_ethnicity.Size = new System.Drawing.Size(100, 20);
-            this.textBox_ethnicity.TabIndex = 6;
-            this.textBox_ethnicity.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // textBox_phoneNumber
-            // 
-            this.textBox_phoneNumber.Location = new System.Drawing.Point(234, 113);
-            this.textBox_phoneNumber.Name = "textBox_phoneNumber";
-            this.textBox_phoneNumber.Size = new System.Drawing.Size(100, 20);
-            this.textBox_phoneNumber.TabIndex = 7;
-            // 
-            // label_gender
-            // 
-            this.label_gender.AutoSize = true;
-            this.label_gender.Location = new System.Drawing.Point(57, 94);
-            this.label_gender.Name = "label_gender";
-            this.label_gender.Size = new System.Drawing.Size(42, 13);
-            this.label_gender.TabIndex = 18;
-            this.label_gender.Text = "Gender";
-            // 
-            // label_ethnicity
-            // 
-            this.label_ethnicity.AutoSize = true;
-            this.label_ethnicity.Location = new System.Drawing.Point(117, 94);
-            this.label_ethnicity.Name = "label_ethnicity";
-            this.label_ethnicity.Size = new System.Drawing.Size(47, 13);
-            this.label_ethnicity.TabIndex = 19;
-            this.label_ethnicity.Text = "Ethnicity";
-            this.label_ethnicity.Click += new System.EventHandler(this.label_ethnicity_Click);
-            // 
-            // label_phoneNumber
-            // 
-            this.label_phoneNumber.AutoSize = true;
-            this.label_phoneNumber.Location = new System.Drawing.Point(234, 94);
-            this.label_phoneNumber.Name = "label_phoneNumber";
-            this.label_phoneNumber.Size = new System.Drawing.Size(78, 13);
-            this.label_phoneNumber.TabIndex = 20;
-            this.label_phoneNumber.Text = "Phone Number";
-            // 
-            // textBox_address
-            // 
-            this.textBox_address.Location = new System.Drawing.Point(57, 166);
-            this.textBox_address.Multiline = true;
-            this.textBox_address.Name = "textBox_address";
-            this.textBox_address.Size = new System.Drawing.Size(330, 58);
-            this.textBox_address.TabIndex = 8;
-            // 
-            // label_address
-            // 
-            this.label_address.AutoSize = true;
-            this.label_address.Location = new System.Drawing.Point(60, 147);
-            this.label_address.Name = "label_address";
-            this.label_address.Size = new System.Drawing.Size(45, 13);
-            this.label_address.TabIndex = 22;
-            this.label_address.Text = "Address";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(579, 60);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(243, 20);
-            this.dateTimePicker1.TabIndex = 12;
-            // 
-            // textBox_Allergies_Diseases_Meds
-            // 
-            this.textBox_Allergies_Diseases_Meds.Location = new System.Drawing.Point(57, 258);
-            this.textBox_Allergies_Diseases_Meds.Multiline = true;
-            this.textBox_Allergies_Diseases_Meds.Name = "textBox_Allergies_Diseases_Meds";
-            this.textBox_Allergies_Diseases_Meds.Size = new System.Drawing.Size(327, 210);
-            this.textBox_Allergies_Diseases_Meds.TabIndex = 9;
-            // 
-            // label_Allergies_Diseases_Meds
-            // 
-            this.label_Allergies_Diseases_Meds.AutoSize = true;
-            this.label_Allergies_Diseases_Meds.Location = new System.Drawing.Point(57, 239);
-            this.label_Allergies_Diseases_Meds.Name = "label_Allergies_Diseases_Meds";
-            this.label_Allergies_Diseases_Meds.Size = new System.Drawing.Size(158, 13);
-            this.label_Allergies_Diseases_Meds.TabIndex = 25;
-            this.label_Allergies_Diseases_Meds.Text = "Allergies, Diseases, Medications";
             // 
             // Clerical
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(834, 519);
-            this.Controls.Add(this.label_Allergies_Diseases_Meds);
-            this.Controls.Add(this.textBox_Allergies_Diseases_Meds);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label_address);
-            this.Controls.Add(this.textBox_address);
-            this.Controls.Add(this.label_phoneNumber);
-            this.Controls.Add(this.label_ethnicity);
-            this.Controls.Add(this.label_gender);
-            this.Controls.Add(this.textBox_phoneNumber);
-            this.Controls.Add(this.textBox_ethnicity);
-            this.Controls.Add(this.textBox_gender);
+            this.ClientSize = new System.Drawing.Size(720, 356);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lastNameBox);
             this.Controls.Add(this.selectButton);
@@ -312,8 +196,9 @@
             this.Controls.Add(this.firstNameBox);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.searchButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Clerical";
-            this.Text = "MedOffice 1.0";
+            this.Text = "MedOffice_1.0";
             this.Load += new System.EventHandler(this.Clerical_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -337,16 +222,5 @@
         private System.Windows.Forms.Button selectButton;
         private System.Windows.Forms.TextBox lastNameBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox_gender;
-        private System.Windows.Forms.TextBox textBox_ethnicity;
-        private System.Windows.Forms.TextBox textBox_phoneNumber;
-        private System.Windows.Forms.Label label_gender;
-        private System.Windows.Forms.Label label_ethnicity;
-        private System.Windows.Forms.Label label_phoneNumber;
-        private System.Windows.Forms.TextBox textBox_address;
-        private System.Windows.Forms.Label label_address;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox_Allergies_Diseases_Meds;
-        private System.Windows.Forms.Label label_Allergies_Diseases_Meds;
     }
 }

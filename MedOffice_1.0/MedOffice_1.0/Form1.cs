@@ -1,5 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
 using System.Data.OleDb;
 
 namespace MedOffice_1._0
@@ -12,7 +20,8 @@ namespace MedOffice_1._0
         public Form1()
         {
             InitializeComponent();
-            conn.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Robbie\Documents\Med_2.mdb;";
+            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\xdark\Documents\MedOfficeDB.accdb;
+Persist Security Info=False;";
         }
 
         private void Form1_Load(object sender, EventArgs e)
