@@ -32,5 +32,16 @@ namespace MedOffice_1._0.Properties {
                 return ((string)(this["MedOfficeDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\MedOfficeDB_Test_13M" +
+            "ay.mdb")]
+        public string MedOfficeDB_Test_13MayConnectionString {
+            get {
+                return ((string)(this["MedOfficeDB_Test_13MayConnectionString"]));
+            }
+        }
     }
 }

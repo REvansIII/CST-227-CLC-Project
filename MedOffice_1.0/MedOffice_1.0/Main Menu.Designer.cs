@@ -132,7 +132,7 @@
             // clericalFormToolStripMenuItem
             // 
             this.clericalFormToolStripMenuItem.Name = "clericalFormToolStripMenuItem";
-            this.clericalFormToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clericalFormToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.clericalFormToolStripMenuItem.Text = "Clerical Form";
             this.clericalFormToolStripMenuItem.Click += new System.EventHandler(this.clericalFormToolStripMenuItem_Click);
             // 
@@ -147,7 +147,7 @@
             // testResultsToolStripMenuItem
             // 
             this.testResultsToolStripMenuItem.Name = "testResultsToolStripMenuItem";
-            this.testResultsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.testResultsToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.testResultsToolStripMenuItem.Text = "Test Results";
             this.testResultsToolStripMenuItem.Click += new System.EventHandler(this.testResultsToolStripMenuItem_Click);
             // 
@@ -187,6 +187,7 @@
             this.MainMenuStrip = this.menuStrip;
             this.Name = "Main_Menu";
             this.Text = "Main_Menu";
+            this.Load += new System.EventHandler(this.Main_Menu_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -213,7 +214,6 @@
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clericalFormToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testResultsToolStripMenuItem;
     }

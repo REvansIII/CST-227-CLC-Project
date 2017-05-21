@@ -10,7 +10,7 @@ namespace MedOffice_1._0
     public static class ConnectionString
     {
         //Edit and add your connection to the DB here
-        private static string conn = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Robbie\Documents\MedOfficeDB_Test_13May.mdb;
+        private static string conn = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Gary\Downloads\CST-227-CLC-Project-master (1)\CST-227-CLC-Project-master\MedOfficeDB_Test_13May.mdb;
                                      Persist Security Info=False;";
         
         //Get and Set for connection string
