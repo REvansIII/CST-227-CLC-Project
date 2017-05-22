@@ -47,6 +47,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.medicalAssistantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -124,7 +125,8 @@
             // formsToolStripMenuItem
             // 
             this.formsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clericalFormToolStripMenuItem});
+            this.clericalFormToolStripMenuItem,
+            this.medicalAssistantToolStripMenuItem});
             this.formsToolStripMenuItem.Name = "formsToolStripMenuItem";
             this.formsToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.formsToolStripMenuItem.Text = "Forms";
@@ -132,7 +134,7 @@
             // clericalFormToolStripMenuItem
             // 
             this.clericalFormToolStripMenuItem.Name = "clericalFormToolStripMenuItem";
-            this.clericalFormToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.clericalFormToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.clericalFormToolStripMenuItem.Text = "Clerical Form";
             this.clericalFormToolStripMenuItem.Click += new System.EventHandler(this.clericalFormToolStripMenuItem_Click);
             // 
@@ -147,7 +149,7 @@
             // testResultsToolStripMenuItem
             // 
             this.testResultsToolStripMenuItem.Name = "testResultsToolStripMenuItem";
-            this.testResultsToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.testResultsToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.testResultsToolStripMenuItem.Text = "Test Results";
             this.testResultsToolStripMenuItem.Click += new System.EventHandler(this.testResultsToolStripMenuItem_Click);
             // 
@@ -174,6 +176,12 @@
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
+            // 
+            // medicalAssistantToolStripMenuItem
+            // 
+            this.medicalAssistantToolStripMenuItem.Name = "medicalAssistantToolStripMenuItem";
+            this.medicalAssistantToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.medicalAssistantToolStripMenuItem.Text = "Medical Assistant";
             // 
             // Main_Menu
             // 
@@ -215,6 +223,7 @@
         private System.Windows.Forms.ToolStripMenuItem clericalFormToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testResultsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem medicalAssistantToolStripMenuItem;
     }
 }
 

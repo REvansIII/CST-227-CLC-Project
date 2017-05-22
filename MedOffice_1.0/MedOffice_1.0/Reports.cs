@@ -7,7 +7,7 @@ namespace MedOffice_1._0
 {
     public partial class Reports : Form
     {
-        OleDbConnection conn = new OleDbConnection(ConnectionString.Conn);
+        OleDbConnection conn = new OleDbConnection(OurConnection.Conn);
 
         public string patientLast, patientFirst, Test_Control, TestResults, PatientNum;
         public string GlucoseTest, BloodTest, StoolSample, XRay, PhysicalHealth;
@@ -36,7 +36,7 @@ namespace MedOffice_1._0
         public Reports()
         {
             InitializeComponent();
-            conn.ConnectionString = ConnectionString.Conn;
+            conn.ConnectionString = OurConnection.Conn;
         }
 
         //Opens Patient_Xray form sending it the current PatientNumber

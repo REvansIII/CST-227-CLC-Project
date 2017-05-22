@@ -15,7 +15,7 @@ namespace MedOffice_1._0
     public partial class Patient_Xray : Form
     {
         //Class level variables
-        OleDbConnection conn = new OleDbConnection(ConnectionString.Conn);
+        OleDbConnection conn = new OleDbConnection(OurConnection.Conn);
         String PatientNum = "";
         int xRayTypeID = 0;
 
