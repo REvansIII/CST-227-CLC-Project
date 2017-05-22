@@ -32,6 +32,8 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.textbox_TestControl = new System.Windows.Forms.TextBox();
             this.textBox_LastName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +51,7 @@
             this.medOfficeDB_Test_13MayDataSet = new MedOffice_1._0.MedOfficeDB_Test_13MayDataSet();
             this.patientXraysBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.patient_XraysTableAdapter = new MedOffice_1._0.MedOfficeDB_Test_13MayDataSetTableAdapters.Patient_XraysTableAdapter();
+            this.listBox_TestResults = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medOfficeDB_Test_13MayDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientXraysBindingSource)).BeginInit();
@@ -173,19 +176,29 @@
             // 
             // chart1
             // 
+            chartArea1.Area3DStyle.Enable3D = true;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(12, 161);
+            this.chart1.Location = new System.Drawing.Point(12, 194);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "Glucose_Test";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Blood_Test";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Stool_Sample";
             this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(307, 213);
             this.chart1.TabIndex = 14;
-            this.chart1.Text = "chart1";
+            this.chart1.Text = "Test Results";
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // medOfficeDB_Test_13MayDataSet
             // 
@@ -201,12 +214,25 @@
             // 
             this.patient_XraysTableAdapter.ClearBeforeFill = true;
             // 
+            // listBox_TestResults
+            // 
+            this.listBox_TestResults.ColumnWidth = 10;
+            this.listBox_TestResults.FormattingEnabled = true;
+            this.listBox_TestResults.HorizontalExtent = 300;
+            this.listBox_TestResults.HorizontalScrollbar = true;
+            this.listBox_TestResults.Location = new System.Drawing.Point(325, 173);
+            this.listBox_TestResults.Name = "listBox_TestResults";
+            this.listBox_TestResults.ScrollAlwaysVisible = true;
+            this.listBox_TestResults.Size = new System.Drawing.Size(444, 264);
+            this.listBox_TestResults.TabIndex = 15;
+            // 
             // Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(334, 386);
+            this.ClientSize = new System.Drawing.Size(781, 549);
+            this.Controls.Add(this.listBox_TestResults);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.btnCreateXray);
             this.Controls.Add(this.btnOpenXray);
@@ -252,5 +278,6 @@
         private MedOfficeDB_Test_13MayDataSet medOfficeDB_Test_13MayDataSet;
         private System.Windows.Forms.BindingSource patientXraysBindingSource;
         private MedOfficeDB_Test_13MayDataSetTableAdapters.Patient_XraysTableAdapter patient_XraysTableAdapter;
+        private System.Windows.Forms.ListBox listBox_TestResults;
     }
 }

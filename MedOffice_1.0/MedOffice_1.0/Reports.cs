@@ -2,15 +2,19 @@
 using System.Data.OleDb;
 using System.Windows.Forms;
 using System.Data;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace MedOffice_1._0
 {
     public partial class Reports : Form
     {
+        // public enum grade : int { poor, average, good, excellent };
+        int poor, average, good, excellent;
+            
         OleDbConnection conn = new OleDbConnection(ConnectionString.Conn);
 
-        public string patientLast, patientFirst, Test_Control, TestResults, PatientNum;
-        public string GlucoseTest, BloodTest, StoolSample, XRay, PhysicalHealth;
+        public string patientLast, patientFirst, Test_Control, TestResults, PatientNum, dbPoints;
+        public  string GlucoseTest, BloodTest, StoolSample, XRay, PhysicalHealth;
 
        
 
@@ -26,10 +30,17 @@ namespace MedOffice_1._0
             GetPatientXrays();
         }
 
+        private void chart1_Click(object sender, EventArgs e)
+        {
+            
+           
+        }
+
         private void Main_Click(object sender, EventArgs e)
         {
-            Clerical nClerical = new Clerical();
-            nClerical.Show();
+            Main_Menu cMDI = new Main_Menu(true);
+            //Opens Main_Menu form
+            cMDI.Show();
             this.Hide();
         }
 
@@ -67,7 +78,7 @@ namespace MedOffice_1._0
                 {
                     //gets patientNumber from DB based on First and last name
                     Connection = conn,
-                    CommandText = "Select PatientNumber FROM ourPatients WHERE PatientLast = '" + textBox_LastName.Text + "'" +
+                    CommandText = "Select PatientNumber FROM OurPatients WHERE PatientLast = '" + textBox_LastName.Text + "'" +
                     "AND PatientFirst = '" + textBox_FirstName.Text + "'"
                 };
 
@@ -116,10 +127,28 @@ namespace MedOffice_1._0
 
 
                     TestResults = (patientLast + "," + patientFirst + "/" + " Glucose Test:" + GlucoseTest + "/" + " Blood Test:" +
-                        BloodTest + "/ " + " Stool Sample:" + StoolSample + "/ " + " X-Ray Results:" + XRay + "/" + " Physical Health:" + PhysicalHealth +
+                        BloodTest + "/ " + " Stool Sample:" + StoolSample + "/ " + 
                         "/" + " Test Control Code:" + Test_Control);
 
-                    //listBox_TestReport.Items.Add(TestResults);
+                    listBox_TestResults.Items.Add(TestResults);
+
+                    String[] seriesArray = { "Glucose Test", "BloodTest", "Stool Sample" };
+
+                    int[] points = { 2, 3, 1 };
+
+
+
+                    for (int i = 0; i < chart1.Series.Count; i++)
+                    {
+                        Series series = this.chart1.Series.Add(seriesArray[i]);
+                        series.Points.Add(points[i]);
+
+
+
+                        // listBox_TestReport.Items.Add(TestResults);
+                    }
+
+
                 }
             }
             catch (Exception ex)
@@ -165,6 +194,8 @@ namespace MedOffice_1._0
             /*TODO: Send Patient_Xray Form Patient_Xrays data based on the XRay_ID selected from the ComboBox
              * and pull up that data in the Patient_Xrays form */
         }
+
+
     
     }
 }    

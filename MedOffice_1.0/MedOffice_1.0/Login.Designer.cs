@@ -40,7 +40,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 25);
+            this.label1.Location = new System.Drawing.Point(80, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 36);
             this.label1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // usernameBox
             // 
             this.usernameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.usernameBox.Location = new System.Drawing.Point(82, 81);
+            this.usernameBox.Location = new System.Drawing.Point(97, 78);
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(100, 20);
             this.usernameBox.TabIndex = 1;
@@ -57,7 +57,7 @@
             // passwordBox
             // 
             this.passwordBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.passwordBox.Location = new System.Drawing.Point(82, 117);
+            this.passwordBox.Location = new System.Drawing.Point(97, 114);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.Size = new System.Drawing.Size(100, 20);
             this.passwordBox.TabIndex = 2;
@@ -82,7 +82,7 @@
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(94, 143);
+            this.loginButton.Location = new System.Drawing.Point(110, 150);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(75, 23);
             this.loginButton.TabIndex = 5;
@@ -95,7 +95,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(249, 182);
+            this.ClientSize = new System.Drawing.Size(304, 218);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
