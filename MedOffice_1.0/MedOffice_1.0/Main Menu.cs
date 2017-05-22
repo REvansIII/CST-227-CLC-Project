@@ -40,10 +40,5 @@ namespace MedOffice_1._0
             reports.Show();
             this.Hide();
         }
-
-        private void Main_Menu_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -13,7 +13,7 @@ namespace MedOffice_1._0
         public string GlucoseTest, BloodTest, StoolSample, XRay, PhysicalHealth;
 
        
-
+        //Grabs patient data, PatientNumber, and fills the cboXrayImages combobox
         private void button_Run_Click(object sender, EventArgs e)
         { 
             //Gets patient report data
@@ -33,28 +33,27 @@ namespace MedOffice_1._0
             this.Hide();
         }
 
-
-
         public Reports()
         {
             InitializeComponent();
             conn.ConnectionString = ConnectionString.Conn;
         }
 
+        //Opens Patient_Xray form sending it the current PatientNumber
         private void btnCreateXray_Click(object sender, EventArgs e)
         {
-            /* TODO: Need to generate a new XRay_ID using the Patient_ID sent from this form
-             * Do not need to populate any other fields as they will be populated in the Patient_Xray form
+            /* Sends current PatientNum to X-Ray Form to create new record in the Patient_Xrays table
              */
-            Patient_Xray pXray = new Patient_Xray();
-            pXray.Show();
-        }
-
-        private void Reports_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'medOfficeDB_Test_13MayDataSet.Patient_Xrays' table. You can move, or remove it, as needed.
-            this.patient_XraysTableAdapter.Fill(this.medOfficeDB_Test_13MayDataSet.Patient_Xrays);
-
+            if (PatientNum != null)
+            {
+                Patient_Xray pXray = new Patient_Xray(PatientNum);
+                pXray.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please look up a patient before creating a new Xray for a patient", "No Patient found");
+                textBox_FirstName.Focus();
+            }
         }
 
         //Gets PatientNumber from DB
@@ -138,7 +137,6 @@ namespace MedOffice_1._0
             
             try
             {
-                MessageBox.Show(PatientNum);
                 conn.Open();
                 String XrayLookup = "SELECT XRay_ID, Xray_Title FROM Patient_Xrays WHERE Patient_ID= "
                + PatientNum + " ORDER BY Xray_Title DESC";
@@ -159,12 +157,21 @@ namespace MedOffice_1._0
             cboXrayImages.DisplayMember = "Xray_Title";
             cboXrayImages.DataSource = ds.Tables[0];
         }
-
+        
+        //Opens Patient_Xray form sending it the current PatientNumber and Xray_ID
         private void btnOpenXray_Click(object sender, EventArgs e)
         {
-            /*TODO: Send Patient_Xray Form Patient_Xrays data based on the XRay_ID selected from the ComboBox
+            /*Send Patient_Xray Form Patient_Xrays data based on the XRay_ID selected from the ComboBox
              * and pull up that data in the Patient_Xrays form */
-        }
-    
+            if (cboXrayImages.SelectedIndex != -1) { 
+            Patient_Xray pXray = new Patient_Xray(cboXrayImages.SelectedValue.ToString(), PatientNum);
+            pXray.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select a record from the drop down list.", "Drop down list item not selected");
+                cboXrayImages.Focus();
+            }
+        } 
     }
 }    

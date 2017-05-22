@@ -47,13 +47,6 @@ namespace MedOffice_1._0
         {
             InitializeComponent();
             conn.ConnectionString = ConnectionString.Conn;
-            //conn2.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\xdark\Documents\MedOfficeDB.accdb;
-//Persist Security Info=False;";
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void searchButton_Click(object sender, EventArgs e)

@@ -94,7 +94,6 @@
             this.insBox.Name = "insBox";
             this.insBox.Size = new System.Drawing.Size(121, 21);
             this.insBox.TabIndex = 4;
-            this.insBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 

@@ -59,7 +59,7 @@
             this.textbox_TestControl.Location = new System.Drawing.Point(12, 122);
             this.textbox_TestControl.Name = "textbox_TestControl";
             this.textbox_TestControl.Size = new System.Drawing.Size(135, 20);
-            this.textbox_TestControl.TabIndex = 0;
+            this.textbox_TestControl.TabIndex = 2;
             // 
             // textBox_LastName
             // 
@@ -102,7 +102,7 @@
             this.Main.Location = new System.Drawing.Point(244, 43);
             this.Main.Name = "Main";
             this.Main.Size = new System.Drawing.Size(75, 23);
-            this.Main.TabIndex = 4;
+            this.Main.TabIndex = 6;
             this.Main.Text = "Main Menu";
             this.Main.UseVisualStyleBackColor = true;
             this.Main.Click += new System.EventHandler(this.Main_Click);
@@ -112,7 +112,7 @@
             this.textBox_FirstName.Location = new System.Drawing.Point(12, 43);
             this.textBox_FirstName.Name = "textBox_FirstName";
             this.textBox_FirstName.Size = new System.Drawing.Size(135, 20);
-            this.textBox_FirstName.TabIndex = 2;
+            this.textBox_FirstName.TabIndex = 0;
             // 
             // label3
             // 
@@ -128,7 +128,7 @@
             this.button_Run.Location = new System.Drawing.Point(163, 43);
             this.button_Run.Name = "button_Run";
             this.button_Run.Size = new System.Drawing.Size(75, 23);
-            this.button_Run.TabIndex = 3;
+            this.button_Run.TabIndex = 5;
             this.button_Run.Text = "Run Report";
             this.button_Run.UseVisualStyleBackColor = true;
             this.button_Run.Click += new System.EventHandler(this.button_Run_Click);
@@ -149,14 +149,14 @@
             this.cboXrayImages.Location = new System.Drawing.Point(163, 89);
             this.cboXrayImages.Name = "cboXrayImages";
             this.cboXrayImages.Size = new System.Drawing.Size(156, 21);
-            this.cboXrayImages.TabIndex = 11;
+            this.cboXrayImages.TabIndex = 7;
             // 
             // btnOpenXray
             // 
             this.btnOpenXray.Location = new System.Drawing.Point(163, 119);
             this.btnOpenXray.Name = "btnOpenXray";
             this.btnOpenXray.Size = new System.Drawing.Size(75, 23);
-            this.btnOpenXray.TabIndex = 12;
+            this.btnOpenXray.TabIndex = 8;
             this.btnOpenXray.Text = "Open Xray";
             this.btnOpenXray.UseVisualStyleBackColor = true;
             this.btnOpenXray.Click += new System.EventHandler(this.btnOpenXray_Click);
@@ -166,7 +166,7 @@
             this.btnCreateXray.Location = new System.Drawing.Point(244, 119);
             this.btnCreateXray.Name = "btnCreateXray";
             this.btnCreateXray.Size = new System.Drawing.Size(75, 23);
-            this.btnCreateXray.TabIndex = 13;
+            this.btnCreateXray.TabIndex = 9;
             this.btnCreateXray.Text = "New Xray";
             this.btnCreateXray.UseVisualStyleBackColor = true;
             this.btnCreateXray.Click += new System.EventHandler(this.btnCreateXray_Click);
@@ -224,7 +224,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Reports";
             this.Text = "Reports";
-            this.Load += new System.EventHandler(this.Reports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medOfficeDB_Test_13MayDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientXraysBindingSource)).EndInit();

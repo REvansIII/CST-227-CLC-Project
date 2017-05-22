@@ -187,7 +187,6 @@
             this.MainMenuStrip = this.menuStrip;
             this.Name = "Main_Menu";
             this.Text = "Main_Menu";
-            this.Load += new System.EventHandler(this.Main_Menu_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);

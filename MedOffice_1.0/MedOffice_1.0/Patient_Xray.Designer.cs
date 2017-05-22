@@ -33,7 +33,7 @@
             this.txtMemo = new System.Windows.Forms.RichTextBox();
             this.lblMemo = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnNwq = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             this.txtXrayImageLoc = new System.Windows.Forms.TextBox();
             this.lblXRayImage = new System.Windows.Forms.Label();
             this.btnBrowse = new System.Windows.Forms.Button();
@@ -85,18 +85,21 @@
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnNwq
+            // btnNew
             // 
-            this.btnNwq.Location = new System.Drawing.Point(8, 180);
-            this.btnNwq.Name = "btnNwq";
-            this.btnNwq.Size = new System.Drawing.Size(75, 23);
-            this.btnNwq.TabIndex = 4;
-            this.btnNwq.Text = "New";
-            this.btnNwq.UseVisualStyleBackColor = true;
+            this.btnNew.Location = new System.Drawing.Point(8, 180);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.TabIndex = 4;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // txtXrayImageLoc
             // 
+            this.txtXrayImageLoc.BackColor = System.Drawing.Color.White;
             this.txtXrayImageLoc.Enabled = false;
             this.txtXrayImageLoc.Location = new System.Drawing.Point(6, 58);
             this.txtXrayImageLoc.Name = "txtXrayImageLoc";
@@ -194,7 +197,6 @@
             // 
             this.txtXrayTitle.Location = new System.Drawing.Point(118, 9);
             this.txtXrayTitle.Name = "txtXrayTitle";
-            this.txtXrayTitle.ReadOnly = true;
             this.txtXrayTitle.Size = new System.Drawing.Size(109, 20);
             this.txtXrayTitle.TabIndex = 14;
             // 
@@ -217,7 +219,7 @@
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.lblXRayImage);
             this.Controls.Add(this.txtXrayImageLoc);
-            this.Controls.Add(this.btnNwq);
+            this.Controls.Add(this.btnNew);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblMemo);
             this.Controls.Add(this.txtMemo);
@@ -240,7 +242,7 @@
         private System.Windows.Forms.RichTextBox txtMemo;
         private System.Windows.Forms.Label lblMemo;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnNwq;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.TextBox txtXrayImageLoc;
         private System.Windows.Forms.Label lblXRayImage;
         private System.Windows.Forms.Button btnBrowse;
