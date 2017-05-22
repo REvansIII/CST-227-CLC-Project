@@ -40,5 +40,13 @@ namespace MedOffice_1._0
             reports.Show();
             this.Hide();
         }
+
+        //Print button under file
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Brings up Print dialog to print application screen
+            PrintDialog nPD = new PrintDialog();
+            nPD.ShowDialog();
+        }
     }
 }
