@@ -65,3 +65,7 @@ C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\
 C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1.0.csproj.GenerateResource.Cache
 C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1._0.MedicalAssistant.resources
 C:\Users\xdark\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1._0.AppointmentView.resources
+C:\Users\Robbie\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\bin\Debug\MedOfficeDB_Test_13May.mdb
+C:\Users\Robbie\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1._0.AppointmentView.resources
+C:\Users\Robbie\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1._0.MedicalAssistant.resources
+C:\Users\Robbie\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1._0.Patient_Xray.resources
