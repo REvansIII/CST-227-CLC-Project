@@ -10,6 +10,45 @@ namespace MedOffice_1._0
         //OleDbConnection conn2 = new OleDbConnection();
         public string patientLast, patientFirst, ins, dob, fullPatient, age;
 
+        private void checkInButton_Click(object sender, EventArgs e)
+        {
+            string checkIn = "Yes";
+            conn.Open();
+            OleDbCommand comm = new OleDbCommand();
+            comm.Connection = conn;
+            comm.CommandText = "UPDATE OurPatients SET Checked_In = '" + checkIn + "' WHERE PatientLast= '"
+                + patientLast + "' and PatientFirst = '" + patientFirst + "'";
+            comm.ExecuteNonQuery();
+            MessageBox.Show("Patient checked in successfully");
+            conn.Close();
+        }
+
+        private void apptSave_Click(object sender, EventArgs e)
+        {
+            string date = apptDateBox.Text;
+            conn.Open();
+            OleDbCommand comm = new OleDbCommand();
+            comm.Connection = conn;
+            comm.CommandText = "UPDATE OurPatients SET AppointmentDate= '"
+                + date + "' WHERE PatientLast= '" + patientLast
+                + "' and PatientFirst= '" + patientFirst + "' and PatientAge= '" + age + "'";
+            comm.ExecuteNonQuery();
+            MessageBox.Show("Appointment set for " + date);
+            conn.Close();
+            firstNameBox.Clear();
+            lastNameBox.Clear();
+            patientBox.Items.Clear();
+            ageBox.Clear();
+            dobBox.Clear();
+            patientBox.Items.Clear();
+        }
+
+        private void viewApptButton_Click(object sender, EventArgs e)
+        {
+            AppointmentView apView = new AppointmentView();
+            apView.Show();
+        }
+
         private void saveButton_Click(object sender, EventArgs e)
         {
             patientLast = lastNameBox.Text;
@@ -21,7 +60,7 @@ namespace MedOffice_1._0
             conn.Open();
             OleDbCommand comm = new OleDbCommand();
             comm.Connection = conn;
-            comm.CommandText = "INSERT INTO OurPatients(PatientLast, PatientFirst, PatientAge" 
+            comm.CommandText = "INSERT INTO OurPatients(PatientLast, PatientFirst, PatientAge"
                 + ", PatientDOB, PatientIns)" +
                      "VALUES ('" + patientLast + "', '" + patientFirst
                      + "', '" + age + "', '" + dob + "', '"
@@ -40,15 +79,17 @@ namespace MedOffice_1._0
         private void Clerical_Load(object sender, EventArgs e)
         {
             insBox.Items.Add("Selfpay");
-            insBox.Items.Add("Insurance");
+            insBox.Items.Add("BCBS");
+            insBox.Items.Add("UHC");
+            insBox.Items.Add("Medicare");
+            insBox.Items.Add("Aflac");
+            insBox.Items.Add("Medicaid");
         }
 
         public Clerical()
         {
             InitializeComponent();
-            conn.ConnectionString = ConnectionString.Conn;
-            //conn2.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\xdark\Documents\MedOfficeDB.accdb;
-//Persist Security Info=False;";
+            conn.ConnectionString = OurConnection.Conn;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -58,7 +99,7 @@ namespace MedOffice_1._0
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-
+            patientBox.Items.Clear();
             patientLast = lastNameBox.Text;
             patientFirst = firstNameBox.Text;
             dob = dobBox.Text;
@@ -70,7 +111,7 @@ namespace MedOffice_1._0
             comm.Connection = conn;
 
             comm.CommandText = "SELECT * FROM OurPatients WHERE PatientLast= '"
-                + patientLast + "' and PatientFirst= '" + patientFirst
+                + patientLast + "' or PatientFirst= '" + patientFirst
                 + "'";
             OleDbDataReader reader = comm.ExecuteReader();
 
@@ -81,11 +122,11 @@ namespace MedOffice_1._0
                 age = (reader["PatientAge"].ToString());
                 dob = (reader["PatientDOB"].ToString());
                 ins = (reader["PatientIns"].ToString());
-                fullPatient = ("" + patientLast + "," + patientFirst + " age " 
+                fullPatient = ("" + patientLast + "," + patientFirst + " age "
                     + age + " " + dob + " " + ins);
                 patientBox.Items.Add(fullPatient);
             }
-            
+
             conn.Close();
         }
     }

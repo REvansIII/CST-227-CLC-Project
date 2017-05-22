@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.OleDb;
 
 namespace MedOffice_1._0
@@ -20,7 +19,7 @@ namespace MedOffice_1._0
         public Login()
         {
             InitializeComponent();
-            conn.ConnectionString = ConnectionString.Conn;
+            conn.ConnectionString = OurConnection.Conn;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -47,11 +46,17 @@ namespace MedOffice_1._0
                 }
                 switch (permission)
                 {
-                   
+                    //Medical Assistant
+                    case "7":
+                        Main_Menu mMDI = new Main_Menu(false, true);
+                        mMDI.Show();
+                        usernameBox.Text = username = passwordBox.Text = password = permission = "";
+                        break;
+
                     //Clerical login page 2 is Clerical groupID
                     case "2":
                     //Creates and opens the MDI and sets Clerical form to true
-                    Main_Menu cMDI = new Main_Menu(true);
+                    Main_Menu cMDI = new Main_Menu(true, false);
                     //Opens Clerical form
                     cMDI.Show();
                     //Clears username, password, and permission in Login menu for variables and text fields
