@@ -2,6 +2,7 @@
 using System.Data.OleDb;
 using System.Windows.Forms;
 using System.Data;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace MedOffice_1._0
 {
@@ -28,8 +29,9 @@ namespace MedOffice_1._0
 
         private void Main_Click(object sender, EventArgs e)
         {
-            Clerical nClerical = new Clerical();
-            nClerical.Show();
+            Main_Menu cMDI = new Main_Menu(true, false);
+            //Opens Clerical form
+            cMDI.Show();
             this.Hide();
         }
 
@@ -115,10 +117,30 @@ namespace MedOffice_1._0
 
 
                     TestResults = (patientLast + "," + patientFirst + "/" + " Glucose Test:" + GlucoseTest + "/" + " Blood Test:" +
-                        BloodTest + "/ " + " Stool Sample:" + StoolSample + "/ " + " X-Ray Results:" + XRay + "/" + " Physical Health:" + PhysicalHealth +
+                        BloodTest + "/ " + " Stool Sample:" + StoolSample +
                         "/" + " Test Control Code:" + Test_Control);
 
-                    //listBox_TestReport.Items.Add(TestResults);
+
+                    listBox_TestResults.Items.Add(TestResults);
+
+                    String[] seriesArray = { "GlucoseTest", "BloodTest", "StoolSample" };
+
+                    int[] points = { 2, 3, 1 };
+
+
+
+                    for (int i = 0; i < points.Length; i++)
+                    {
+                        Series series = this.chart1.Series.Add(seriesArray[i]);
+                        series.Points.Add(points[i]);
+
+
+
+
+
+
+
+                    } 
                 }
             }
             catch (Exception ex)
