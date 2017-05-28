@@ -41,13 +41,14 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clericalFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.medicalAssistantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testResultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.medicalAssistantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.invoiceReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -138,10 +139,17 @@
             this.clericalFormToolStripMenuItem.Text = "Clerical Form";
             this.clericalFormToolStripMenuItem.Click += new System.EventHandler(this.clericalFormToolStripMenuItem_Click);
             // 
+            // medicalAssistantToolStripMenuItem
+            // 
+            this.medicalAssistantToolStripMenuItem.Name = "medicalAssistantToolStripMenuItem";
+            this.medicalAssistantToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.medicalAssistantToolStripMenuItem.Text = "Medical Assistant";
+            // 
             // reportsToolStripMenuItem
             // 
             this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.testResultsToolStripMenuItem});
+            this.testResultsToolStripMenuItem,
+            this.invoiceReportToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.reportsToolStripMenuItem.Text = "Reports";
@@ -149,7 +157,7 @@
             // testResultsToolStripMenuItem
             // 
             this.testResultsToolStripMenuItem.Name = "testResultsToolStripMenuItem";
-            this.testResultsToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.testResultsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.testResultsToolStripMenuItem.Text = "Test Results";
             this.testResultsToolStripMenuItem.Click += new System.EventHandler(this.testResultsToolStripMenuItem_Click);
             // 
@@ -177,11 +185,12 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // medicalAssistantToolStripMenuItem
+            // invoiceReportToolStripMenuItem
             // 
-            this.medicalAssistantToolStripMenuItem.Name = "medicalAssistantToolStripMenuItem";
-            this.medicalAssistantToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.medicalAssistantToolStripMenuItem.Text = "Medical Assistant";
+            this.invoiceReportToolStripMenuItem.Name = "invoiceReportToolStripMenuItem";
+            this.invoiceReportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.invoiceReportToolStripMenuItem.Text = "Invoice Report";
+            this.invoiceReportToolStripMenuItem.Click += new System.EventHandler(this.invoiceReportToolStripMenuItem_Click);
             // 
             // Main_Menu
             // 
@@ -224,6 +233,7 @@
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testResultsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem medicalAssistantToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem invoiceReportToolStripMenuItem;
     }
 }
 
