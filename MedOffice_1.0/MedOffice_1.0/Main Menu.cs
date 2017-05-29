@@ -65,5 +65,10 @@ namespace MedOffice_1._0
             nPInvoices.MdiParent = this;
             nPInvoices.Show();
         }
+
+        private void medicalAssistantToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

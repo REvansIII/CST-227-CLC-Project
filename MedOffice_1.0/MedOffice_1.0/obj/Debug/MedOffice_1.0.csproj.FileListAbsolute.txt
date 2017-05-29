@@ -87,3 +87,4 @@ C:\Users\Gary\Downloads\CST-227-CLC-Project-master\MedOffice_1.0\MedOffice_1.0\b
 C:\Users\Gary\Downloads\CST-227-CLC-Project-master\MedOffice_1.0\MedOffice_1.0\bin\Debug\MedOfficeDB_Test_13May.mdb
 C:\Users\Gary\Downloads\CST-227-CLC-Project-master\MedOffice_1.0\MedOffice_1.0\bin\Debug\MedOffice_1.0.exe
 C:\Users\Gary\Downloads\CST-227-CLC-Project-master\MedOffice_1.0\MedOffice_1.0\bin\Debug\MedOffice_1.0.pdb
+C:\Users\Robbie\Documents\GitHub\CST-227-CLC-Project\MedOffice_1.0\MedOffice_1.0\obj\Debug\MedOffice_1._0.Patients_Invoices.resources
